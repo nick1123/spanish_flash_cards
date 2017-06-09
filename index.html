@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Spanish Practice</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/jumbotron-narrow.css" rel="stylesheet">
+
+    <script>
+
+      function shuffle(arr) {
+        var i,
+            j,
+            temp;
+        for (i = arr.length - 1; i > 0; i--) {
+          j = Math.floor(Math.random() * (i + 1));
+          temp = arr[i];
+          arr[i] = arr[j];
+          arr[j] = temp;
+        }
+        return arr;    
+      };
+
+      function setup(wordPairGroupIndex)
+      {
+        currentWordPairGroupIndex = wordPairGroupIndex
+        wordPairs = wordPairGroup[wordPairGroupIndex];
+        words = shuffle(Object.keys(wordPairs).concat(Object.keys(wordPairs)))
+        allDone = false;
+        nextWord();
+      }
+
+      function nextWord()
+      {
+        updateWordsLeft();
+
+        if (words.length == 0) {
+          document.getElementById("mainTextDisplay").textContent = "All Done!";
+          document.getElementById('definitionButton').style.display = 'none';
+          document.getElementById('wordButtons').style.display = 'none';
+        } else {
+          currentSpanishWord = words.pop();
+          correctAnswer = wordPairs[currentSpanishWord];
+          document.getElementById("mainTextDisplay").textContent = currentSpanishWord;
+          document.getElementById('definitionButton').style.display = 'none';
+          document.getElementById('wordButtons').style.display = 'block';
+        }
+      }
+
+      function updateWordsLeft()
+      {
+        document.getElementById('wordsLeftSpan').style.display = 'block';
+        document.getElementById("wordsLeft").textContent = words.length;
+      }
+
+      function wordSuccess()
+      {
+        nextWord();
+      }
+
+      function wordFailure()
+      {
+        document.getElementById('definitionButton').style.display = 'block';
+        document.getElementById('wordButtons').style.display = 'none';
+        document.getElementById("mainTextDisplay").textContent = "Definition of "+ currentSpanishWord + ": " + wordPairs[currentSpanishWord];
+        words.push(currentSpanishWord);
+        words.push(currentSpanishWord);
+        words.push(currentSpanishWord);
+        words = shuffle(words);
+        updateWordsLeft();
+      }
+
+      var currentWordPairGroupIndex;
+      var wordPairs;
+      var words;
+      var allDone;
+      var currentSpanishWord;
+
+      var wordPairGroup = {
+        "top_words_5_1" : { "la" : "the, \"third person direct object\"", "el" : "the", "que" : "which, that", "de" : "from, of", "en" : "on, in" },
+        "top_words_5_2" : { "y" : "and", "a" : "at, to", "ser" : "to be[norm]", "no" : "no", "se" : "[“reﬂexive” marker]" },
+        "top_words_5_3" : { "un" : "an, a", "lo" : "[3rd person][dir obj-m], the", "decir" : "say, to tell", "hacer" : "make, to do", "su" : "her, his, their, your[formal]" },
+        "top_words_5_4" : { "haber" : "to have", "tener" : "to have", "me" : "me[obj]", "otro" : "another, other", "por" : "for, by, through" },
+        "top_words_5_5" : { "con" : "with", "todo" : "every, all", "más" : "more", "para" : "to, for, in order to", "yo" : "I[subj]" },
+        "top_words_5_6" : { "como" : "as, like", "si" : "whether, if", "poder" : "can, to be able to", "dar" : "to give", "le" : "[3rd person][indir obj]" },
+        "top_words_5_7" : { "estar" : "to be", "pero" : "yet, but, except", "qué" : "which?, what?, how !", "este" : "this[m][esta[f]]", "entre" : "among, between" },
+        "top_words_5_8" : { "pasar" : "spend[time], to pass", "mi" : "my", "uno" : "one", "primero" : "ﬁrst", "donde" : "where" },
+        "top_words_5_9" : { "porque" : "because", "deber" : "ought to, should, to owe", "ese" : "that[m][esa[f]]", "sí" : "yes", "nos" : "us[obj]" },
+        "top_words_5_10" : { "ni" : "neither, not even, nor", "sobre" : "over, on top of, about", "o" : "or", "cuando" : "when", "hombre" : "mankind, man, husband" },
+        "top_words_5_11" : { "grande" : "great, large, big", "ir" : "to go", "alguno" : "someone[pron], some", "muy" : "really, very", "forma" : "shape, form, way" },
+        "top_words_5_12" : { "cada" : "every, each", "algo" : "somewhat, something", "tres" : "three", "ya" : "still, already", "dos" : "two" },
+        "top_words_5_13" : { "momento" : "time, moment", "menos" : "fewer, less", "hasta" : "up to, until, even", "vez" : "time[speciﬁc occurrence]", "así" : "like that" },
+        "top_words_5_14" : { "esto" : "this[n]", "ver" : "to see", "cierto" : "true, sure, certain", "mundo" : "world", "poner" : "get , to put[on]" },
+        "top_words_5_15" : { "sin" : "without", "punto" : "period, dot, point", "mucho" : "many, much, a lot", "después" : "after", "cosa" : "thing" },
+        "top_words_5_16" : { "él" : "[ellos]them[m], he", "casi" : "nearly, almost", "llegar" : "to arrive", "tan" : "as, such, too, so", "también" : "also" },
+        "top_words_5_17" : { "hablar" : "talk, to speak", "mujer" : "wife, woman", "ella" : "[ellas]them[f], she", "hora" : "time[speciﬁc], hour", "ahora" : "now" },
+        "top_words_5_18" : { "propio" : "typical, proper, own", "saber" : "ﬁnd out, to know[a fact]", "tanto" : "so many, so much", "pensar" : "to think", "desde" : "since, from" },
+        "top_words_5_19" : { "mejor" : "better , best", "niño" : "littleboy, child", "mismo" : "same", "tipo" : "kind, type", "pequeño" : "young, small, little" },
+        "top_words_5_20" : { "te" : "you[obj formal]", "año" : "year", "allí" : "over there, there", "parte" : "portion, part", "vida" : "life" },
+        "top_words_5_21" : { "trabajo" : "effort, job, work", "querer" : "love, to want", "nombre" : "noun, name", "casa" : "house", "país" : "country" },
+        "top_words_5_22" : { "siempre" : "forever, always", "volver" : "to V again, to return", "tiempo" : "weather, time[general]", "mayor" : "main, older, larger", "eso" : "that[n]" },
+        "top_words_5_23" : { "bajo" : "underneath, under", "nada" : "not]at all, nothing", "persona" : "person", "bien" : "well", "nuestro" : "our" },
+        "top_words_5_24" : { "antes" : "before", "historia" : "story, history", "poco" : "few, little, a littlebit", "durante" : "for[time], during", "quien" : "whom, who" },
+        "top_words_5_25" : { "lugar" : "position, place", "realidad" : "actuality, reality", "presentar" : "present, to introduce", "conocer" : "to know[someone or place]", "vivir" : "to live" },
+        "top_words_5_26" : { "hecho" : "happening, fact", "entonces" : "then, so", "día" : "day", "salir" : "go out, to leave", "llamar" : "name, to call" },
+        "top_words_5_27" : { "cuatro" : "four", "seguir" : "keep on, to follow", "recordar" : "remind, to remember", "cambio" : "change", "blanco" : "white" },
+        "top_words_5_28" : { "sacar" : "to take out", "conseguir" : "obtain, acquire, to get", "aquel" : "that[over there]", "empezar" : "start, to begin", "modo" : "manner, way" },
+        "top_words_5_29" : { "llevar" : "carry, to take", "amigo" : "friend", "tema" : "topic, subject, theme", "creer" : "think, to believe", "dejar" : "leave, to let" },
+        "top_words_5_30" : { "existir" : "to exist", "verdad" : "truth", "aquí" : "here", "ciudad" : "city", "general" : "general" },
+        "top_words_5_31" : { "sólo" : "just, only", "aunque" : "even though, although", "calle" : "street", "parecer" : "look like, to seem", "manera" : "manner, way" },
+        "top_words_5_32" : { "recibir" : "to receive", "quedar" : "stay, to remain", "preguntar" : "to ask[a question]", "trabajar" : "to work", "esperar" : "expect, hope[for], to wait" },
+        "top_words_5_33" : { "aceptar" : "to accept", "formar" : "to form", "hacia" : "towards, toward", "sino" : "except, but, rather", "aún" : "yet, still" },
+        "top_words_5_34" : { "nunca" : "ever, never", "bueno" : "good", "caso" : "occasion, case", "mano" : "hand", "nuevo" : "new" },
+        "top_words_5_35" : { "pueblo" : "village, people", "cuanto" : "regarding, en cuanto a: in terms of", "solo" : "alone, lonely", "sentir" : "regret, to feel", "medio" : "middle, half" },
+        "top_words_5_36" : { "alcanzar" : "catch up with, to reach", "cuyo" : "whose", "jugar" : "game], to play[sport", "fuerza" : "power, force, strength", "tarde" : "evening, afternoon" },
+        "top_words_5_37" : { "tal" : "such[a]", "posible" : "possible", "ejemplo" : "example", "tratar" : "deal with, treat, to try", "crear" : "to create" },
+        "top_words_5_38" : { "encontrar" : "to ﬁnd", "ante" : "in the presence of, before", "ser" : "being", "aire" : "appearance, wind, air", "venir" : "to come" },
+        "top_words_5_39" : { "escribir" : "to write", "viejo" : "aged, old", "palabra" : "word", "obra" : "deed, book, work", "ninguno" : "nobody[pron], none, no" },
+        "top_words_5_40" : { "mí" : "me[obj prep]", "pues" : "well then, then", "situación" : "situation", "campo" : "country, ﬁeld", "luego" : "afterwards, later" },
+        "top_words_5_41" : { "dentro" : "inside", "cuenta" : "account, bill", "cuerpo" : "body", "segundo" : "second", "cual" : "whom, who, which" },
+        "top_words_5_42" : { "cambiar" : "to change", "ocurrir" : "occur, to happen", "luz" : "light", "anterior" : "preceding, previous", "menor" : "youngest, younger" },
+        "top_words_5_43" : { "aparecer" : "to appear", "éste" : "[ésta[f]], this one[m]", "gente" : "people", "tomar" : "drink, to take", "escuchar" : "to listen to" },
+        "top_words_5_44" : { "gracia" : "favor, grace, pl]thank you", "además" : "besides, as well, also", "gustar" : "to be pleasing to", "varios" : "various, several", "cabeza" : "head[part of body]" },
+        "top_words_5_45" : { "efecto" : "effect", "mantener" : "maintain, to keep", "santo" : "saint[m]", "quizás" : "maybe, perhaps", "servicio" : "helpfulness, service" },
+        "top_words_5_46" : { "cinco" : "ﬁve", "tierra" : "ground, land, earth", "cómo" : "how?", "comprender" : "to understand", "comer" : "to eat" },
+        "top_words_5_47" : { "contar" : "count, to tell", "mil" : "thousand", "programa" : "plan, program", "distinto" : "different, distinct", "ahí" : "there" },
+        "top_words_5_48" : { "último" : "ﬁnal, last", "don" : "gift, Mr, courtesy title[m]", "pedir" : "request, to ask for", "agua" : "[el]water", "abrir" : "to open" },
+        "top_words_5_49" : { "valor" : "worth, value", "embargo" : "sin embargo: nevertheless", "fácil" : "easy", "nadie" : "anybody, nobody", "contrario" : "opposite, contrary" },
+        "top_words_5_50" : { "imaginar" : "to imagine", "junto" : "next to, together with", "partido" : "[sports]match, group, party", "ciento" : "hundred", "leer" : "to read" },
+        "top_words_5_51" : { "pregunta" : "question", "español" : "Spanish", "hoy" : "nowadays, today", "mesa" : "board, table", "cualquier" : "anyone[pron], any" },
+        "top_words_5_52" : { "seguridad" : "safety, security", "mirar" : "watch, to look", "estudiar" : "to study", "lado" : "side", "mientras" : "as long as, whereas, while" },
+        "top_words_5_53" : { "base" : "basis, base", "época" : "period, age, time", "claro" : "clear", "clase" : "order, class, kind", "quién" : "whom?, who?" },
+        "top_words_5_54" : { "alto" : "high, tall", "problema" : "problem", "antiguo" : "former, ancient, old", "posibilidad" : "possibility", "vista" : "sight, view" },
+        "top_words_5_55" : { "obtener" : "to obtain", "centro" : "downtown, middle, center", "carta" : "[playing]card, letter", "pobre" : "poor", "contra" : "opposite, against" },
+        "top_words_5_56" : { "hijo" : "[pl]children, son", "mostrar" : "to show", "interés" : "interest", "término" : "end, term[language]", "buscar" : "to look for" },
+        "top_words_5_57" : { "especial" : "special", "político" : "political", "desear" : "wish for, desire, to want", "necesario" : "necessary", "terminar" : "end, to ﬁnish" },
+        "top_words_5_58" : { "perder" : "miss, to lose", "deseo" : "wish, desire", "padre" : "father", "tampoco" : "either, nor, neither", "señor" : "lord, Mr, sir" },
+        "top_words_5_59" : { "resultar" : "turn out, to result", "función" : "meeting, function", "noche" : "evening, night", "largo" : "long", "familia" : "family" },
+        "top_words_5_60" : { "desarrollar" : "to develop", "seis" : "six", "bajo" : "low, short", "producir" : "cause, to produce", "segundo" : "second" },
+        "top_words_5_61" : { "inglés" : "English", "negro" : "black", "miedo" : "fear", "entrar" : "to enter", "dedicar" : "devote, to dedicate" },
+        "top_words_5_62" : { "paso" : "pace, step", "usted" : "formal], you[subj", "río" : "river", "dirección" : "address, direction", "cuestión" : "matter, question" },
+        "top_words_5_63" : { "derecho" : "law, justice, right", "malo" : "bad", "principio" : "principle, beginning", "guerra" : "warfare, war", "único" : "sole, unique, only" },
+        "top_words_5_64" : { "avanzar" : "progress, to advance", "entender" : "to understand", "lanzar" : "launch, to throw", "diferencia" : "difference", "bueno" : "well…" },
+        "top_words_5_65" : { "propiedad" : "property", "repetir" : "to repeat", "viaje" : "trip, travel", "nosotros" : "we[subj]", "diez" : "ten" },
+        "top_words_5_66" : { "indicar" : "to indicate", "capaz" : "able, capable", "todavía" : "yet, still", "servir" : "to serve", "joven" : "young person, teenager" },
+        "top_words_5_67" : { "comenzar" : "start, to begin", "idea" : "idea", "peso" : "load, weight, peso[money]", "ocho" : "eight", "estudio" : "learning, study" },
+        "top_words_5_68" : { "grupo" : "group", "decidir" : "to decide", "considerar" : "to consider", "allá" : "over there, there", "mal" : "badly" },
+        "top_words_5_69" : { "anunciar" : "advertise, to announce", "sociedad" : "society", "política" : "policy, politics", "detener" : "detain, to stop", "camino" : "path, route, road" },
+        "top_words_5_70" : { "duda" : "doubt", "dinero" : "money", "millón" : "fortune, million", "abandonar" : "leave[a place], to abandon", "pieza" : "part, piece" },
+        "top_words_5_71" : { "claro" : "clearly, of course", "movimiento" : "movement", "sitio" : "space, place", "arriba" : "above, up", "crecer" : "increase, to grow" },
+        "top_words_5_72" : { "siglo" : "age, century", "necesidad" : "need, necessity", "verdadero" : "real, true", "doctor" : "doctor", "natural" : "natural" },
+        "top_words_5_73" : { "contestar" : "reply, to answer", "mercado" : "market", "reconocer" : "admit, to recognize", "importante" : "important", "recurso" : "means, recourse, resource" },
+        "top_words_5_74" : { "intentar" : "attempt, to try", "realizar" : "carry out, to fulﬁll", "mes" : "month", "golpe" : "punch, strike, hit", "grado" : "grade, degree" },
+        "top_words_5_75" : { "morir" : "to die", "ojo" : "eye", "permitir" : "permit, to allow", "humano" : "human", "físico" : "physical" },
+        "top_words_5_76" : { "convertir" : "become, change, to convert", "voz" : "voice", "incluso" : "even , including", "responsabilidad" : "responsibility", "bastante" : "quite a bit , fairly, rather" },
+        "top_words_5_77" : { "profundo" : "profound, deep", "minuto" : "minute", "suelo" : "ﬂoor, ground", "traer" : "carry, to bring", "asegurar" : "insure, secure, to assure" },
+        "top_words_5_78" : { "brazo" : "arm", "uso" : "use", "parecido" : "similar", "imagen" : "picture, image", "origen" : "cause, origin" },
+        "top_words_5_79" : { "caer" : "to fall", "relación" : "relation, relationship", "apoyar" : "lean on, to support", "sangre" : "blood", "demás" : "others, the rest" },
+        "top_words_5_80" : { "igual" : "same[as], equal", "edad" : "age", "cantidad" : "amount, quantity", "actuar" : "to act", "comprobar" : "prove, to verify" },
+        "top_words_5_81" : { "comprar" : "to buy", "según" : "according to", "observar" : "to observe", "frente" : "frente a: across from, al frente: facing", "lograr" : "manage, get, to achieve" },
+        "top_words_5_82" : { "puerta" : "door", "completo" : "complete", "moderno" : "modern", "atravesar" : "to cross", "maestro" : "master, teacher[m]" },
+        "top_words_5_83" : { "oír" : "to hear", "adelante" : "further, forward", "diferente" : "separate, different", "delante" : "ahead, [in]front[of]", "sentido" : "feeling, sense" },
+        "top_words_5_84" : { "imposible" : "impossible", "solamente" : "only", "libro" : "book", "directamente" : "straight away, directly", "lenguaje" : "speech, language" },
+        "top_words_5_85" : { "ello" : "it[subj-n]", "difícil" : "hard, difﬁcult", "ofrecer" : "present, to offer", "sistema" : "system", "enorme" : "vast, enormous" },
+        "top_words_5_86" : { "realmente" : "in fact, actually, really", "social" : "social", "abierto" : "unlocked, open", "subir" : "to go up", "evitar" : "prevent, to avoid" },
+        "top_words_5_87" : { "superar" : "surpass, to overcome", "papel" : "part, role, paper", "surgir" : "spring[forth], to appear", "rojo" : "red", "pasado" : "last, past" },
+        "top_words_5_88" : { "favor" : "beneﬁt, favor", "siguiente" : "next, following", "semana" : "week", "miembro" : "limb, member", "suponer" : "assume, to suppose" },
+        "top_words_5_89" : { "puro" : "clean, pure", "carga" : "cargo, charge, load", "calor" : "warmth, heat", "enemigo" : "enemy", "tender" : "lay out, to tend to" },
+        "top_words_5_90" : { "serio" : "serious", "madre" : "mother", "mover" : "incite, to move", "demasiado" : "too many, too much", "ganar" : "earn, to win" },
+        "top_words_5_91" : { "lleno" : "ﬁlled, full", "altura" : "altitude, height", "civil" : "civil", "niña" : "young girl, child", "cara" : "expression, face" },
+        "top_words_5_92" : { "metro" : "subway, meter", "cuidado" : "carefulness, care", "levantar" : "lift, to raise", "dios" : "divinity, god", "hermano" : "[pl]siblings, brother" },
+        "top_words_5_93" : { "participar" : "to participate", "dónde" : "where?", "explicar" : "to explain", "libertad" : "liberty, freedom", "naturaleza" : "character, nature" },
+        "top_words_5_94" : { "sol" : "sun", "popular" : "popular", "utilizar" : "utilize, to use", "voluntad" : "intention, willpower, will", "verde" : "green" },
+        "top_words_5_95" : { "extraño" : "foreign, strange", "accidente" : "irregularity, accident", "económico" : "economic", "desaparecer" : "vanish, to disappear", "rico" : "tasty, rich" },
+        "top_words_5_96" : { "olvidar" : "to forget", "zona" : "zone, area", "fuera" : "away, outside, out", "número" : "number", "estado" : "status, condition, state" },
+        "top_words_5_97" : { "través" : "through, over, a través: across", "especie" : "species, sort, kind", "empresa" : "venture, company, ﬁrm", "cincuenta" : "ﬁfty", "nacer" : "to be born" },
+        "top_words_5_98" : { "lengua" : "strip[of land], tongue, language", "usar" : "to use", "pagar" : "to pay", "tamaño" : "dimension, size", "revista" : "journal, magazine" },
+        "top_words_5_99" : { "cerrado" : "closed", "frontera" : "frontier, border", "faltar" : "to be lacking", "animal" : "animal", "acción" : "deed, act, action" },
+        "top_words_5_100" : { "correr" : "to run", "corazón" : "core, heart", "aprender" : "to learn", "enseñar" : "show, to teach", "quitar" : "take away, to remove" },
+        "top_words_5_101" : { "mensaje" : "message", "analizar" : "to analyze", "bien" : "beneﬁt, property, goods", "público" : "public", "elegir" : "elect, to choose" },
+        "top_words_5_102" : { "región" : "region", "policía" : "police ofﬁcer, police force, police", "comienzo" : "beginning, start", "suceder" : "to happen", "fondo" : "end, bottom" },
+        "top_words_5_103" : { "amor" : "love", "resolver" : "work out, settle, to resolve", "vecino" : "neighbor", "actividad" : "action, activity", "corto" : "brief, short" },
+        "top_words_5_104" : { "oportunidad" : "chance, opportunity", "derecha" : "right hand, right", "dirigir" : "manage, to direct", "unir" : "join[together], to unite", "muerte" : "death" },
+        "top_words_5_105" : { "plantear" : "present, to propose", "gobierno" : "government", "compartir" : "to share", "sentar" : "seat, to sit[down]", "pensamiento" : "thinking, thought" },
+        "top_words_5_106" : { "ley" : "rule, bill, law", "plano" : "level, map, plane", "tocar" : "play[instrument], to touch", "importancia" : "importance", "terrible" : "terrible" },
+        "top_words_5_107" : { "línea" : "course, line", "temprano" : "early", "andar" : "function, to walk", "resultado" : "outcome, result", "espacio" : "room, space" },
+        "top_words_5_108" : { "constituir" : "consist of, to constitute", "carrera" : "race, course, career", "mañana" : "tomorrow, morning", "frase" : "phrase", "reunión" : "reunion, meeting" },
+        "top_words_5_109" : { "cultura" : "culture", "enfermedad" : "sickness, illness", "resto" : "leftover, remainder, rest", "literatura" : "literature", "fe" : "faith" },
+        "top_words_5_110" : { "sueño" : "sleep, dream", "importar" : "import, to matter", "dispuesto" : "ready, willing", "compañero" : "classmate, companion", "depender" : "to depend on" },
+        "top_words_5_111" : { "poder" : "power", "verano" : "summer", "acontecimiento" : "happening, event", "cumplir" : "to fulﬁll", "jamás" : "never" },
+        "top_words_5_112" : { "tercero" : "third", "continuar" : "to continue", "arma" : "[el]weapon", "pie" : "base, foot", "esfuerzo" : "endeavor, effort" },
+        "top_words_5_113" : { "condición" : "condition", "contribuir" : "to contribute", "cortar" : "to cut", "atender" : "attend to, to serve", "ayudar" : "to help" },
+        "top_words_5_114" : { "color" : "color", "pasado" : "past", "lista" : "roll, roster, list", "famoso" : "well-known, famous", "falta" : "shortage, lack" },
+        "top_words_5_115" : { "ocasión" : "occasion, opportunity", "visitar" : "to visit", "premio" : "reward, prize", "visita" : "guest, visitor, visit", "tu" : "formal], your[sg" },
+        "top_words_5_116" : { "dedo" : "digit, toe, ﬁnger", "quince" : "ﬁfteen", "demostrar" : "demonstrate, to show", "despertar" : "arouse, to wake[up]", "existencia" : "life, existence" },
+        "top_words_5_117" : { "mente" : "mind", "mayoría" : "majority", "conocimiento" : "knowledge", "examen" : "exam, examination", "teléfono" : "telephone, phone" },
+        "top_words_5_118" : { "juego" : "sport, play, game", "mío" : "mine", "acto" : "action, act", "rama" : "limb, bough, branch", "libre" : "vacant, free" },
+        "top_words_5_119" : { "recoger" : "to pick up", "inmediato" : "immediate", "nivel" : "level", "ciencia" : "knowledge, science", "ayuda" : "aid, help" },
+        "top_words_5_120" : { "ambiente" : "atmosphere, environment", "imponer" : "enforce, to impose", "alemán" : "German", "casar" : "to marry", "masa" : "bulk, crowd, dough, mass" },
+        "top_words_5_121" : { "clásico" : "classic", "futuro" : "future", "loco" : "insane, crazy", "atención" : "attention", "pegar" : "stick[on], to hit" },
+        "top_words_5_122" : { "comida" : "meal, food", "capacidad" : "capacity", "ambos" : "both", "concreto" : "real, concrete", "ocupar" : "use, to occupy" },
+        "top_words_5_123" : { "entrada" : "admission ticket, entrance", "tú" : "formal], you[subj-sg", "objetivo" : "objective", "disposición" : "disposition, disposal", "entregar" : "to deliver" },
+        "top_words_5_124" : { "teatro" : "drama, theater", "cuál" : "which?", "volumen" : "volume", "francés" : "French", "cerca" : "near, close" },
+        "top_words_5_125" : { "nueve" : "nine", "experiencia" : "experience", "descubrir" : "to discover", "pintura" : "paint, painting", "precisamente" : "precisely" },
+        "top_words_5_126" : { "determinar" : "decide, to determine", "materia" : "subject, matter", "televisión" : "television, TV", "autoridad" : "authority", "hogar" : "hearth, home" },
+        "top_words_5_127" : { "norteamericano" : "North American", "material" : "element, material", "cuándo" : "when?", "pintar" : "to paint", "energía" : "power, energy" },
+        "top_words_5_128" : { "recuerdo" : "keepsake, memory", "conservar" : "preserve, to conserve", "meter" : "to put[into]", "santa" : "saint[f]", "común" : "common" },
+        "top_words_5_129" : { "viajar" : "to travel", "discutir" : "discuss, to argue", "pasión" : "desire, passion", "vino" : "wine", "alma" : "[el]soul" },
+        "top_words_5_130" : { "teoría" : "theory", "temer" : "to fear", "artista" : "performer, artist", "junto" : "together", "fecha" : "day, date" },
+        "top_words_5_131" : { "sufrir" : "undergo, to suffer", "cielo" : "ceiling, heaven, sky", "temor" : "fear", "jefe" : "manager, boss, leader", "capítulo" : "chapter" },
+        "top_words_5_132" : { "profesional" : "professional", "techo" : "roof", "presencia" : "appearance, presence", "separar" : "to separate", "decisión" : "decision" },
+        "top_words_5_133" : { "absolutamente" : "completely, absolutely", "echar" : "cast, to throw", "nacional" : "national", "objeto" : "thing, object", "autor" : "author, writer" },
+        "top_words_5_134" : { "aspecto" : "appearance, aspect", "seguramente" : "securely, surely", "resistir" : "endure, to resist", "responder" : "respond, to answer", "encima" : "in addition, on top, above" },
+        "top_words_5_135" : { "acercar" : "to come near", "preparar" : "to prepare", "citar" : "quote, to cite", "extender" : "spread, to extend", "descansar" : "to rest" },
+        "top_words_5_136" : { "asunto" : "affair, issue, matter", "fundamental" : "fundamental", "facilidad" : "facility, ease", "preocupar" : "to worry", "atrás" : "ago, behind, back" },
+        "top_words_5_137" : { "empleado" : "employee", "pronto" : "quick, soon", "concepto" : "concept", "grave" : "solemn, serious", "retirar" : "retire, to take away" },
+        "top_words_5_138" : { "establecer" : "to establish", "adquirir" : "get, to acquire", "costar" : "be hard, to cost", "mencionar" : "cite, to mention", "práctica" : "skill, practice" },
+        "top_words_5_139" : { "publicar" : "to publish", "idioma" : "[speciﬁc]language", "aprovechar" : "to take advantage of", "futuro" : "future", "conclusión" : "end, conclusion" },
+        "top_words_5_140" : { "vehículo" : "car, vehicle", "militar" : "military", "compañía" : "company", "curso" : "direction, course", "cine" : "US movie theater, cinema" },
+        "top_words_5_141" : { "marcar" : "dial, note, to mark", "comentario" : "comment, remark", "vivo" : "bright, alive", "lucha" : "wrestle, struggle, ﬁght", "daño" : "damage, injury, harm" },
+        "top_words_5_142" : { "intento" : "try, attempt", "enfermo" : "sick, ill", "piso" : "story, ﬂoor", "gesto" : "gesture", "derecho" : "straight, right" },
+        "top_words_5_143" : { "actual" : "current", "diciembre" : "December", "economía" : "economics, economy, thriftiness", "introducir" : "bring in, to introduce", "totalmente" : "completely, totally" },
+        "top_words_5_144" : { "cuánto" : "how much?", "posición" : "position", "lejos" : "off], far[away", "leche" : "milk", "conciencia" : "consciousness, conscience" },
+        "top_words_5_145" : { "aplicar" : "to apply", "bajar" : "let down, to come down", "consejo" : "counsel, council, advice", "próximo" : "next", "piedra" : "rock, stone" },
+        "top_words_5_146" : { "médico" : "doctor", "director" : "principal, manager, director", "recuperar" : "recover, to recuperate", "principal" : "principal, main", "cuento" : "tale, story" },
+        "top_words_5_147" : { "mirada" : "look, gaze", "siete" : "seven", "duro" : "hard", "información" : "information", "espíritu" : "ghost, spirit" },
+        "top_words_5_148" : { "artículo" : "item, product, article", "trasladar" : "transfer, to move", "hábito" : "habit", "positivo" : "positive", "expresión" : "expression" },
+        "top_words_5_149" : { "exponer" : "expose, to expound", "letra" : "lyrics, handwriting, letter", "partida" : "departure, match, game", "sencillo" : "easy, plain, simple", "apenas" : "barely, hardly" },
+        "top_words_5_150" : { "estilo" : "style", "perfecto" : "perfect", "vuelta" : "turn, return", "excepción" : "exception", "control" : "control" },
+        "top_words_5_151" : { "esperanza" : "hope", "superior" : "upper, superior", "habitación" : "bedroom, room, habitat", "manejar" : "handle, to drive", "representar" : "to represent" },
+        "top_words_5_152" : { "causa" : "cause", "semejante" : "alike, such, similar", "alrededor" : "round, around, about", "profesor" : "teacher, professor", "siquiera" : "even[if]" },
+        "top_words_5_153" : { "acompañar" : "to accompany", "labor" : "task, work, labor", "trabajador" : "laborer, worker", "carácter" : "nature, personality", "cantar" : "to sing" },
+        "top_words_5_154" : { "operar" : "to operate", "obstante" : "noobstante: nevertheless", "joven" : "young", "sexo" : "sex", "documento" : "document" },
+        "top_words_5_155" : { "motivo" : "cause, motive", "construir" : "build, to construct", "opinión" : "view, opinion", "dominar" : "master, to dominate", "oscuro" : "obscure, dark" },
+        "top_words_5_156" : { "acordar" : "remind, to remember", "generalmente" : "usually, generally", "cerrar" : "to close", "cadena" : "chain", "tras" : "behind, after" },
+        "top_words_5_157" : { "repartir" : "distribute, deliver, to divide", "fenómeno" : "phenomenon", "proceso" : "procedure, process", "desarrollo" : "development", "contacto" : "contact" },
+        "top_words_5_158" : { "dudar" : "to[have]doubt", "prestar" : "to lend", "guardar" : "save, to keep", "llorar" : "to cry", "margen" : "margin, edge, border, brink" },
+        "top_words_5_159" : { "hallar" : "to ﬁnd[out]", "inmediatamente" : "immediately", "dolor" : "sorrow, ache, pain", "bomba" : "explosion, bomb, pump", "impresión" : "printing, impression" },
+        "top_words_5_160" : { "respuesta" : "reply, answer", "culpa" : "fault, blame", "interesante" : "interesting", "añadir" : "to add", "argentino" : "Argentine" },
+        "top_words_5_161" : { "departamento" : "apartment, department", "durar" : "to last", "tirar" : "pull, to throw", "colegio" : "college, [high]school", "invitar" : "to invite" },
+        "top_words_5_162" : { "marido" : "husband", "diario" : "daily", "naturalmente" : "naturally", "tarea" : "job, task", "acceso" : "entry, access" },
+        "top_words_5_163" : { "impedir" : "hinder, to prevent", "crisis" : "crisis", "sala" : "hall, room", "actitud" : "attitude", "raro" : "scarce, rare, strange" },
+        "top_words_5_164" : { "muerto" : "dead", "suerte" : "fortune, luck", "religioso" : "religious", "instalar" : "to install", "serie" : "series" },
+        "top_words_5_165" : { "cubrir" : "to cover", "cercano" : "near", "argumento" : "plot, argument", "prueba" : "test, trial, proof", "hundir" : "submerge, to sink" },
+        "top_words_5_166" : { "éxito" : "success", "absoluto" : "absolute", "interpretar" : "to interpret", "pleno" : "full, complete", "normal" : "regular, usual, normal" },
+        "top_words_5_167" : { "funcionar" : "function, to work", "señalar" : "signal, to point[out]", "cuarto" : "fourth", "experimentar" : "experiment, to experience", "conocido" : "well-known, known" },
+        "top_words_5_168" : { "mezclar" : "to mix", "paz" : "peace", "proyecto" : "plan, project", "caja" : "safe, box, bank", "rápido" : "fast, quick" },
+        "top_words_5_169" : { "honor" : "honesty, honor", "capital" : "money[m], city[f], capital", "liberar" : "liberate, to free", "completar" : "to complete", "interior" : "inside, interior" },
+        "top_words_5_170" : { "ajeno" : "detached, not belonging to", "despedir" : "dismiss, to say goodbye[to]", "chico" : "boy", "nacimiento" : "origin, birth", "seco" : "arid, dry" },
+        "top_words_5_171" : { "apoyo" : "backing, support", "dividir" : "to divide", "pesado" : "tiresome, boring, heavy", "texto" : "text", "reserva" : "reserve, reservation" },
+        "top_words_5_172" : { "defender" : "protect, to defend", "pertenecer" : "to belong", "formación" : "education, formation", "boca" : "opening, entrance, mouth", "distancia" : "distance" },
+        "top_words_5_173" : { "azul" : "blue", "opinar" : "be of the opinion, to think", "máquina" : "machine", "título" : "heading, title", "habitual" : "habitual, usual, customary" },
+        "top_words_5_174" : { "negar" : "refuse, to deny", "llamada" : "knock, call", "ideal" : "goal, ideal", "suyo" : "yours[informal], theirs, hers, his", "directo" : "straight, direct" },
+        "top_words_5_175" : { "método" : "method", "preciso" : "necessary, precise", "debajo" : "below, underneath", "averiguar" : "ﬁnd out, to investigate", "presión" : "pressure" },
+        "top_words_5_176" : { "ignorar" : "to be unaware", "automóvil" : "automobile", "detrás" : "behind", "contenido" : "content, contents", "hija" : "daughter" },
+        "top_words_5_177" : { "agosto" : "August", "cobrar" : "to charge[money]", "barco" : "ship, boat", "americano" : "American", "vender" : "to sell" },
+        "top_words_5_178" : { "sesenta" : "sixty", "animar" : "to cheer up", "página" : "page", "notar" : "to notice", "árbol" : "tree" },
+        "top_words_5_179" : { "plan" : "plan", "alcance" : "scope, reach", "regresar" : "to return[to a place]", "mandar" : "order, to send", "moda" : "form, fashion" },
+        "top_words_5_180" : { "satisfacer" : "to satisfy", "curiosidad" : "quaintness, curiosity", "escuela" : "school", "memoria" : "memory", "espejo" : "reﬂection, mirror" },
+        "top_words_5_181" : { "elemento" : "element", "romper" : "to break", "matar" : "to kill", "cola" : "queue, line, tail", "juventud" : "youth" },
+        "top_words_5_182" : { "trato" : "agreement, manner, treatment", "coche" : "carriage, car", "veinte" : "twenty", "acudir" : "frequent, go to, to attend", "examinar" : "inspect, to examine" },
+        "top_words_5_183" : { "frío" : "cold", "simplemente" : "just, simply", "tensión" : "stress, tension, strain", "expresar" : "to express", "generación" : "generation" },
+        "top_words_5_184" : { "manifestación" : "manifestation, protest", "terreno" : "terrain, earth, ground", "seguro" : "secure, sure, safe", "raza" : "lineage, race", "arrancar" : "uproot, to start[machine]" },
+        "top_words_5_185" : { "sexual" : "sexual", "puesto" : "position, place, job", "familiar" : "of the family, familiar", "aprobar" : "approve, to pass[test]", "abajo" : "downward, below, down" },
+        "top_words_5_186" : { "quejar" : "to complain", "juicio" : "judgment", "técnico" : "technical", "jardín" : "garden", "intervenir" : "to intervene" },
+        "top_words_5_187" : { "público" : "audience, public", "consecuencia" : "consequence", "ritmo" : "rhythm", "perfectamente" : "perfectly", "feliz" : "fortunate, happy" },
+        "top_words_5_188" : { "exacto" : "true, faithful, exact", "esposa" : "wife", "personaje" : "character[e.g. movie]", "patria" : "fatherland, native land", "inteligente" : "intelligent" },
+        "top_words_5_189" : { "calidad" : "quality", "belleza" : "beauty", "continuo" : "continuous", "instrucción" : "instruction", "inclinación" : "incline, slope, tendency" },
+        "top_words_5_190" : { "temperatura" : "temperature", "huella" : "track, trace, footstep", "mezcla" : "blend, mixture", "ciego" : "blind", "lejano" : "distant" },
+        "top_words_5_191" : { "gusto" : "preference, taste, pleasure", "ejercicio" : "practice, exercise", "hospital" : "hospital", "radio" : "communication[f], set[m], radio", "treinta" : "thirty" },
+        "top_words_5_192" : { "conveniente" : "convenient", "salida" : "outcome, escape, exit", "sentimiento" : "sentiment, feeling", "salvar" : "rescue, to save", "mar" : "sea" },
+        "top_words_5_193" : { "cuarto" : "chamber, room", "parar" : "to stop[moving]", "saber" : "knowledge", "cargo" : "fee, charge, position", "poesía" : "poem, poetry" },
+        "top_words_5_194" : { "música" : "music", "estación" : "season, station", "justicia" : "fairness, justice", "brillante" : "sparkling, shiny, brilliant", "destino" : "destiny, destination" },
+        "top_words_5_195" : { "revolución" : "revolution", "entrega" : "delivery", "sensación" : "feeling, sensation", "intelectual" : "intellectual", "representante" : "representative" },
+        "top_words_5_196" : { "agudo" : "acute, sharp", "rato" : "while, moment, time", "doce" : "twelve", "salto" : "hop, jump, skip", "alegría" : "happiness, joy" },
+        "top_words_5_197" : { "aun" : "still, even[though]", "operación" : "operation", "delicado" : "delicate", "nota" : "grade, note", "convencido" : "persuaded, convinced" },
+        "top_words_5_198" : { "simple" : "simple-minded, mere, simple", "construcción" : "construction", "secretario" : "secretary", "exposición" : "display, exhibition", "internacional" : "international" },
+        "top_words_5_199" : { "clave" : "key", "cruzar" : "to cross", "personal" : "personal", "pared" : "[interior]wall", "griego" : "Greek" },
+        "top_words_5_200" : { "poderoso" : "powerful", "punta" : "point, tip", "mundial" : "worldwide", "especialmente" : "especially", "empleo" : "job, work, occupation" },
+
+        "top_words_50_1" : { "la" : "the, \"third person direct object\"", "el" : "the", "que" : "which, that", "de" : "from, of", "en" : "on, in", "y" : "and", "a" : "at, to", "ser" : "to be[norm]", "no" : "no", "se" : "[“reﬂexive” marker]", "un" : "an, a", "lo" : "[3rd person][dir obj-m], the", "decir" : "say, to tell", "hacer" : "make, to do", "su" : "her, his, their, your[formal]", "haber" : "to have", "tener" : "to have", "me" : "me[obj]", "otro" : "another, other", "por" : "for, by, through", "con" : "with", "todo" : "every, all", "más" : "more", "para" : "to, for, in order to", "yo" : "I[subj]", "como" : "as, like", "si" : "whether, if", "poder" : "can, to be able to", "dar" : "to give", "le" : "[3rd person][indir obj]", "estar" : "to be", "pero" : "yet, but, except", "qué" : "which?, what?, how !", "este" : "this[m][esta[f]]", "entre" : "among, between", "pasar" : "spend[time], to pass", "mi" : "my", "uno" : "one", "primero" : "ﬁrst", "donde" : "where", "porque" : "because", "deber" : "ought to, should, to owe", "ese" : "that[m][esa[f]]", "sí" : "yes", "nos" : "us[obj]", "ni" : "neither, not even, nor", "sobre" : "over, on top of, about", "o" : "or", "cuando" : "when", "hombre" : "mankind, man, husband" },
+        "top_words_50_2" : { "grande" : "great, large, big", "ir" : "to go", "alguno" : "someone[pron], some", "muy" : "really, very", "forma" : "shape, form, way", "cada" : "every, each", "algo" : "somewhat, something", "tres" : "three", "ya" : "still, already", "dos" : "two", "momento" : "time, moment", "menos" : "fewer, less", "hasta" : "up to, until, even", "vez" : "time[speciﬁc occurrence]", "así" : "like that", "esto" : "this[n]", "ver" : "to see", "cierto" : "true, sure, certain", "mundo" : "world", "poner" : "get , to put[on]", "sin" : "without", "punto" : "period, dot, point", "mucho" : "many, much, a lot", "después" : "after", "cosa" : "thing", "él" : "[ellos]them[m], he", "casi" : "nearly, almost", "llegar" : "to arrive", "tan" : "as, such, too, so", "también" : "also", "hablar" : "talk, to speak", "mujer" : "wife, woman", "ella" : "[ellas]them[f], she", "hora" : "time[speciﬁc], hour", "ahora" : "now", "propio" : "typical, proper, own", "saber" : "ﬁnd out, to know[a fact]", "tanto" : "so many, so much", "pensar" : "to think", "desde" : "since, from", "mejor" : "better , best", "niño" : "littleboy, child", "mismo" : "same", "tipo" : "kind, type", "pequeño" : "young, small, little", "te" : "you[obj formal]", "año" : "year", "allí" : "over there, there", "parte" : "portion, part", "vida" : "life" },
+        "top_words_50_3" : { "trabajo" : "effort, job, work", "querer" : "love, to want", "nombre" : "noun, name", "casa" : "house", "país" : "country", "siempre" : "forever, always", "volver" : "to V again, to return", "tiempo" : "weather, time[general]", "mayor" : "main, older, larger", "eso" : "that[n]", "bajo" : "underneath, under", "nada" : "not]at all, nothing", "persona" : "person", "bien" : "well", "nuestro" : "our", "antes" : "before", "historia" : "story, history", "poco" : "few, little, a littlebit", "durante" : "for[time], during", "quien" : "whom, who", "lugar" : "position, place", "realidad" : "actuality, reality", "presentar" : "present, to introduce", "conocer" : "to know[someone or place]", "vivir" : "to live", "hecho" : "happening, fact", "entonces" : "then, so", "día" : "day", "salir" : "go out, to leave", "llamar" : "name, to call", "cuatro" : "four", "seguir" : "keep on, to follow", "recordar" : "remind, to remember", "cambio" : "change", "blanco" : "white", "sacar" : "to take out", "conseguir" : "obtain, acquire, to get", "aquel" : "that[over there]", "empezar" : "start, to begin", "modo" : "manner, way", "llevar" : "carry, to take", "amigo" : "friend", "tema" : "topic, subject, theme", "creer" : "think, to believe", "dejar" : "leave, to let", "existir" : "to exist", "verdad" : "truth", "aquí" : "here", "ciudad" : "city", "general" : "general" },
+        "top_words_50_4" : { "sólo" : "just, only", "aunque" : "even though, although", "calle" : "street", "parecer" : "look like, to seem", "manera" : "manner, way", "recibir" : "to receive", "quedar" : "stay, to remain", "preguntar" : "to ask[a question]", "trabajar" : "to work", "esperar" : "expect, hope[for], to wait", "aceptar" : "to accept", "formar" : "to form", "hacia" : "towards, toward", "sino" : "except, but, rather", "aún" : "yet, still", "nunca" : "ever, never", "bueno" : "good", "caso" : "occasion, case", "mano" : "hand", "nuevo" : "new", "pueblo" : "village, people", "cuanto" : "regarding, en cuanto a: in terms of", "solo" : "alone, lonely", "sentir" : "regret, to feel", "medio" : "middle, half", "alcanzar" : "catch up with, to reach", "cuyo" : "whose", "jugar" : "game], to play[sport", "fuerza" : "power, force, strength", "tarde" : "evening, afternoon", "tal" : "such[a]", "posible" : "possible", "ejemplo" : "example", "tratar" : "deal with, treat, to try", "crear" : "to create", "encontrar" : "to ﬁnd", "ante" : "in the presence of, before", "ser" : "being", "aire" : "appearance, wind, air", "venir" : "to come", "escribir" : "to write", "viejo" : "aged, old", "palabra" : "word", "obra" : "deed, book, work", "ninguno" : "nobody[pron], none, no", "mí" : "me[obj prep]", "pues" : "well then, then", "situación" : "situation", "campo" : "country, ﬁeld", "luego" : "afterwards, later" },
+        "top_words_50_5" : { "dentro" : "inside", "cuenta" : "account, bill", "cuerpo" : "body", "segundo" : "second", "cual" : "whom, who, which", "cambiar" : "to change", "ocurrir" : "occur, to happen", "luz" : "light", "anterior" : "preceding, previous", "menor" : "youngest, younger", "aparecer" : "to appear", "éste" : "[ésta[f]], this one[m]", "gente" : "people", "tomar" : "drink, to take", "escuchar" : "to listen to", "gracia" : "favor, grace, pl]thank you", "además" : "besides, as well, also", "gustar" : "to be pleasing to", "varios" : "various, several", "cabeza" : "head[part of body]", "efecto" : "effect", "mantener" : "maintain, to keep", "santo" : "saint[m]", "quizás" : "maybe, perhaps", "servicio" : "helpfulness, service", "cinco" : "ﬁve", "tierra" : "ground, land, earth", "cómo" : "how?", "comprender" : "to understand", "comer" : "to eat", "contar" : "count, to tell", "mil" : "thousand", "programa" : "plan, program", "distinto" : "different, distinct", "ahí" : "there", "último" : "ﬁnal, last", "don" : "gift, Mr, courtesy title[m]", "pedir" : "request, to ask for", "agua" : "[el]water", "abrir" : "to open", "valor" : "worth, value", "embargo" : "sin embargo: nevertheless", "fácil" : "easy", "nadie" : "anybody, nobody", "contrario" : "opposite, contrary", "imaginar" : "to imagine", "junto" : "next to, together with", "partido" : "[sports]match, group, party", "ciento" : "hundred", "leer" : "to read" },
+        "top_words_50_6" : { "pregunta" : "question", "español" : "Spanish", "hoy" : "nowadays, today", "mesa" : "board, table", "cualquier" : "anyone[pron], any", "seguridad" : "safety, security", "mirar" : "watch, to look", "estudiar" : "to study", "lado" : "side", "mientras" : "as long as, whereas, while", "base" : "basis, base", "época" : "period, age, time", "claro" : "clear", "clase" : "order, class, kind", "quién" : "whom?, who?", "alto" : "high, tall", "problema" : "problem", "antiguo" : "former, ancient, old", "posibilidad" : "possibility", "vista" : "sight, view", "obtener" : "to obtain", "centro" : "downtown, middle, center", "carta" : "[playing]card, letter", "pobre" : "poor", "contra" : "opposite, against", "hijo" : "[pl]children, son", "mostrar" : "to show", "interés" : "interest", "término" : "end, term[language]", "buscar" : "to look for", "especial" : "special", "político" : "political", "desear" : "wish for, desire, to want", "necesario" : "necessary", "terminar" : "end, to ﬁnish", "perder" : "miss, to lose", "deseo" : "wish, desire", "padre" : "father", "tampoco" : "either, nor, neither", "señor" : "lord, Mr, sir", "resultar" : "turn out, to result", "función" : "meeting, function", "noche" : "evening, night", "largo" : "long", "familia" : "family", "desarrollar" : "to develop", "seis" : "six", "bajo" : "low, short", "producir" : "cause, to produce", "segundo" : "second" },
+        "top_words_50_7" : { "inglés" : "English", "negro" : "black", "miedo" : "fear", "entrar" : "to enter", "dedicar" : "devote, to dedicate", "paso" : "pace, step", "usted" : "formal], you[subj", "río" : "river", "dirección" : "address, direction", "cuestión" : "matter, question", "derecho" : "law, justice, right", "malo" : "bad", "principio" : "principle, beginning", "guerra" : "warfare, war", "único" : "sole, unique, only", "avanzar" : "progress, to advance", "entender" : "to understand", "lanzar" : "launch, to throw", "diferencia" : "difference", "bueno" : "well…", "propiedad" : "property", "repetir" : "to repeat", "viaje" : "trip, travel", "nosotros" : "we[subj]", "diez" : "ten", "indicar" : "to indicate", "capaz" : "able, capable", "todavía" : "yet, still", "servir" : "to serve", "joven" : "young person, teenager", "comenzar" : "start, to begin", "idea" : "idea", "peso" : "load, weight, peso[money]", "ocho" : "eight", "estudio" : "learning, study", "grupo" : "group", "decidir" : "to decide", "considerar" : "to consider", "allá" : "over there, there", "mal" : "badly", "anunciar" : "advertise, to announce", "sociedad" : "society", "política" : "policy, politics", "detener" : "detain, to stop", "camino" : "path, route, road", "duda" : "doubt", "dinero" : "money", "millón" : "fortune, million", "abandonar" : "leave[a place], to abandon", "pieza" : "part, piece" },
+        "top_words_50_8" : { "claro" : "clearly, of course", "movimiento" : "movement", "sitio" : "space, place", "arriba" : "above, up", "crecer" : "increase, to grow", "siglo" : "age, century", "necesidad" : "need, necessity", "verdadero" : "real, true", "doctor" : "doctor", "natural" : "natural", "contestar" : "reply, to answer", "mercado" : "market", "reconocer" : "admit, to recognize", "importante" : "important", "recurso" : "means, recourse, resource", "intentar" : "attempt, to try", "realizar" : "carry out, to fulﬁll", "mes" : "month", "golpe" : "punch, strike, hit", "grado" : "grade, degree", "morir" : "to die", "ojo" : "eye", "permitir" : "permit, to allow", "humano" : "human", "físico" : "physical", "convertir" : "become, change, to convert", "voz" : "voice", "incluso" : "even , including", "responsabilidad" : "responsibility", "bastante" : "quite a bit , fairly, rather", "profundo" : "profound, deep", "minuto" : "minute", "suelo" : "ﬂoor, ground", "traer" : "carry, to bring", "asegurar" : "insure, secure, to assure", "brazo" : "arm", "uso" : "use", "parecido" : "similar", "imagen" : "picture, image", "origen" : "cause, origin", "caer" : "to fall", "relación" : "relation, relationship", "apoyar" : "lean on, to support", "sangre" : "blood", "demás" : "others, the rest", "igual" : "same[as], equal", "edad" : "age", "cantidad" : "amount, quantity", "actuar" : "to act", "comprobar" : "prove, to verify" },
+        "top_words_50_9" : { "comprar" : "to buy", "según" : "according to", "observar" : "to observe", "frente" : "frente a: across from, al frente: facing", "lograr" : "manage, get, to achieve", "puerta" : "door", "completo" : "complete", "moderno" : "modern", "atravesar" : "to cross", "maestro" : "master, teacher[m]", "oír" : "to hear", "adelante" : "further, forward", "diferente" : "separate, different", "delante" : "ahead, [in]front[of]", "sentido" : "feeling, sense", "imposible" : "impossible", "solamente" : "only", "libro" : "book", "directamente" : "straight away, directly", "lenguaje" : "speech, language", "ello" : "it[subj-n]", "difícil" : "hard, difﬁcult", "ofrecer" : "present, to offer", "sistema" : "system", "enorme" : "vast, enormous", "realmente" : "in fact, actually, really", "social" : "social", "abierto" : "unlocked, open", "subir" : "to go up", "evitar" : "prevent, to avoid", "superar" : "surpass, to overcome", "papel" : "part, role, paper", "surgir" : "spring[forth], to appear", "rojo" : "red", "pasado" : "last, past", "favor" : "beneﬁt, favor", "siguiente" : "next, following", "semana" : "week", "miembro" : "limb, member", "suponer" : "assume, to suppose", "puro" : "clean, pure", "carga" : "cargo, charge, load", "calor" : "warmth, heat", "enemigo" : "enemy", "tender" : "lay out, to tend to", "serio" : "serious", "madre" : "mother", "mover" : "incite, to move", "demasiado" : "too many, too much", "ganar" : "earn, to win" },
+        "top_words_50_10" : { "lleno" : "ﬁlled, full", "altura" : "altitude, height", "civil" : "civil", "niña" : "young girl, child", "cara" : "expression, face", "metro" : "subway, meter", "cuidado" : "carefulness, care", "levantar" : "lift, to raise", "dios" : "divinity, god", "hermano" : "[pl]siblings, brother", "participar" : "to participate", "dónde" : "where?", "explicar" : "to explain", "libertad" : "liberty, freedom", "naturaleza" : "character, nature", "sol" : "sun", "popular" : "popular", "utilizar" : "utilize, to use", "voluntad" : "intention, willpower, will", "verde" : "green", "extraño" : "foreign, strange", "accidente" : "irregularity, accident", "económico" : "economic", "desaparecer" : "vanish, to disappear", "rico" : "tasty, rich", "olvidar" : "to forget", "zona" : "zone, area", "fuera" : "away, outside, out", "número" : "number", "estado" : "status, condition, state", "través" : "through, over, a través: across", "especie" : "species, sort, kind", "empresa" : "venture, company, ﬁrm", "cincuenta" : "ﬁfty", "nacer" : "to be born", "lengua" : "strip[of land], tongue, language", "usar" : "to use", "pagar" : "to pay", "tamaño" : "dimension, size", "revista" : "journal, magazine", "cerrado" : "closed", "frontera" : "frontier, border", "faltar" : "to be lacking", "animal" : "animal", "acción" : "deed, act, action", "correr" : "to run", "corazón" : "core, heart", "aprender" : "to learn", "enseñar" : "show, to teach", "quitar" : "take away, to remove" },
+        "top_words_50_11" : { "mensaje" : "message", "analizar" : "to analyze", "bien" : "beneﬁt, property, goods", "público" : "public", "elegir" : "elect, to choose", "región" : "region", "policía" : "police ofﬁcer, police force, police", "comienzo" : "beginning, start", "suceder" : "to happen", "fondo" : "end, bottom", "amor" : "love", "resolver" : "work out, settle, to resolve", "vecino" : "neighbor", "actividad" : "action, activity", "corto" : "brief, short", "oportunidad" : "chance, opportunity", "derecha" : "right hand, right", "dirigir" : "manage, to direct", "unir" : "join[together], to unite", "muerte" : "death", "plantear" : "present, to propose", "gobierno" : "government", "compartir" : "to share", "sentar" : "seat, to sit[down]", "pensamiento" : "thinking, thought", "ley" : "rule, bill, law", "plano" : "level, map, plane", "tocar" : "play[instrument], to touch", "importancia" : "importance", "terrible" : "terrible", "línea" : "course, line", "temprano" : "early", "andar" : "function, to walk", "resultado" : "outcome, result", "espacio" : "room, space", "constituir" : "consist of, to constitute", "carrera" : "race, course, career", "mañana" : "tomorrow, morning", "frase" : "phrase", "reunión" : "reunion, meeting", "cultura" : "culture", "enfermedad" : "sickness, illness", "resto" : "leftover, remainder, rest", "literatura" : "literature", "fe" : "faith", "sueño" : "sleep, dream", "importar" : "import, to matter", "dispuesto" : "ready, willing", "compañero" : "classmate, companion", "depender" : "to depend on" },
+        "top_words_50_12" : { "poder" : "power", "verano" : "summer", "acontecimiento" : "happening, event", "cumplir" : "to fulﬁll", "jamás" : "never", "tercero" : "third", "continuar" : "to continue", "arma" : "[el]weapon", "pie" : "base, foot", "esfuerzo" : "endeavor, effort", "condición" : "condition", "contribuir" : "to contribute", "cortar" : "to cut", "atender" : "attend to, to serve", "ayudar" : "to help", "color" : "color", "pasado" : "past", "lista" : "roll, roster, list", "famoso" : "well-known, famous", "falta" : "shortage, lack", "ocasión" : "occasion, opportunity", "visitar" : "to visit", "premio" : "reward, prize", "visita" : "guest, visitor, visit", "tu" : "formal], your[sg", "dedo" : "digit, toe, ﬁnger", "quince" : "ﬁfteen", "demostrar" : "demonstrate, to show", "despertar" : "arouse, to wake[up]", "existencia" : "life, existence", "mente" : "mind", "mayoría" : "majority", "conocimiento" : "knowledge", "examen" : "exam, examination", "teléfono" : "telephone, phone", "juego" : "sport, play, game", "mío" : "mine", "acto" : "action, act", "rama" : "limb, bough, branch", "libre" : "vacant, free", "recoger" : "to pick up", "inmediato" : "immediate", "nivel" : "level", "ciencia" : "knowledge, science", "ayuda" : "aid, help", "ambiente" : "atmosphere, environment", "imponer" : "enforce, to impose", "alemán" : "German", "casar" : "to marry", "masa" : "bulk, crowd, dough, mass" },
+        "top_words_50_13" : { "clásico" : "classic", "futuro" : "future", "loco" : "insane, crazy", "atención" : "attention", "pegar" : "stick[on], to hit", "comida" : "meal, food", "capacidad" : "capacity", "ambos" : "both", "concreto" : "real, concrete", "ocupar" : "use, to occupy", "entrada" : "admission ticket, entrance", "tú" : "formal], you[subj-sg", "objetivo" : "objective", "disposición" : "disposition, disposal", "entregar" : "to deliver", "teatro" : "drama, theater", "cuál" : "which?", "volumen" : "volume", "francés" : "French", "cerca" : "near, close", "nueve" : "nine", "experiencia" : "experience", "descubrir" : "to discover", "pintura" : "paint, painting", "precisamente" : "precisely", "determinar" : "decide, to determine", "materia" : "subject, matter", "televisión" : "television, TV", "autoridad" : "authority", "hogar" : "hearth, home", "norteamericano" : "North American", "material" : "element, material", "cuándo" : "when?", "pintar" : "to paint", "energía" : "power, energy", "recuerdo" : "keepsake, memory", "conservar" : "preserve, to conserve", "meter" : "to put[into]", "santa" : "saint[f]", "común" : "common", "viajar" : "to travel", "discutir" : "discuss, to argue", "pasión" : "desire, passion", "vino" : "wine", "alma" : "[el]soul", "teoría" : "theory", "temer" : "to fear", "artista" : "performer, artist", "junto" : "together", "fecha" : "day, date" },
+        "top_words_50_14" : { "sufrir" : "undergo, to suffer", "cielo" : "ceiling, heaven, sky", "temor" : "fear", "jefe" : "manager, boss, leader", "capítulo" : "chapter", "profesional" : "professional", "techo" : "roof", "presencia" : "appearance, presence", "separar" : "to separate", "decisión" : "decision", "absolutamente" : "completely, absolutely", "echar" : "cast, to throw", "nacional" : "national", "objeto" : "thing, object", "autor" : "author, writer", "aspecto" : "appearance, aspect", "seguramente" : "securely, surely", "resistir" : "endure, to resist", "responder" : "respond, to answer", "encima" : "in addition, on top, above", "acercar" : "to come near", "preparar" : "to prepare", "citar" : "quote, to cite", "extender" : "spread, to extend", "descansar" : "to rest", "asunto" : "affair, issue, matter", "fundamental" : "fundamental", "facilidad" : "facility, ease", "preocupar" : "to worry", "atrás" : "ago, behind, back", "empleado" : "employee", "pronto" : "quick, soon", "concepto" : "concept", "grave" : "solemn, serious", "retirar" : "retire, to take away", "establecer" : "to establish", "adquirir" : "get, to acquire", "costar" : "be hard, to cost", "mencionar" : "cite, to mention", "práctica" : "skill, practice", "publicar" : "to publish", "idioma" : "[speciﬁc]language", "aprovechar" : "to take advantage of", "futuro" : "future", "conclusión" : "end, conclusion", "vehículo" : "car, vehicle", "militar" : "military", "compañía" : "company", "curso" : "direction, course", "cine" : "US movie theater, cinema" },
+        "top_words_50_15" : { "marcar" : "dial, note, to mark", "comentario" : "comment, remark", "vivo" : "bright, alive", "lucha" : "wrestle, struggle, ﬁght", "daño" : "damage, injury, harm", "intento" : "try, attempt", "enfermo" : "sick, ill", "piso" : "story, ﬂoor", "gesto" : "gesture", "derecho" : "straight, right", "actual" : "current", "diciembre" : "December", "economía" : "economics, economy, thriftiness", "introducir" : "bring in, to introduce", "totalmente" : "completely, totally", "cuánto" : "how much?", "posición" : "position", "lejos" : "off], far[away", "leche" : "milk", "conciencia" : "consciousness, conscience", "aplicar" : "to apply", "bajar" : "let down, to come down", "consejo" : "counsel, council, advice", "próximo" : "next", "piedra" : "rock, stone", "médico" : "doctor", "director" : "principal, manager, director", "recuperar" : "recover, to recuperate", "principal" : "principal, main", "cuento" : "tale, story", "mirada" : "look, gaze", "siete" : "seven", "duro" : "hard", "información" : "information", "espíritu" : "ghost, spirit", "artículo" : "item, product, article", "trasladar" : "transfer, to move", "hábito" : "habit", "positivo" : "positive", "expresión" : "expression", "exponer" : "expose, to expound", "letra" : "lyrics, handwriting, letter", "partida" : "departure, match, game", "sencillo" : "easy, plain, simple", "apenas" : "barely, hardly", "estilo" : "style", "perfecto" : "perfect", "vuelta" : "turn, return", "excepción" : "exception", "control" : "control" },
+        "top_words_50_16" : { "esperanza" : "hope", "superior" : "upper, superior", "habitación" : "bedroom, room, habitat", "manejar" : "handle, to drive", "representar" : "to represent", "causa" : "cause", "semejante" : "alike, such, similar", "alrededor" : "round, around, about", "profesor" : "teacher, professor", "siquiera" : "even[if]", "acompañar" : "to accompany", "labor" : "task, work, labor", "trabajador" : "laborer, worker", "carácter" : "nature, personality", "cantar" : "to sing", "operar" : "to operate", "obstante" : "noobstante: nevertheless", "joven" : "young", "sexo" : "sex", "documento" : "document", "motivo" : "cause, motive", "construir" : "build, to construct", "opinión" : "view, opinion", "dominar" : "master, to dominate", "oscuro" : "obscure, dark", "acordar" : "remind, to remember", "generalmente" : "usually, generally", "cerrar" : "to close", "cadena" : "chain", "tras" : "behind, after", "repartir" : "distribute, deliver, to divide", "fenómeno" : "phenomenon", "proceso" : "procedure, process", "desarrollo" : "development", "contacto" : "contact", "dudar" : "to[have]doubt", "prestar" : "to lend", "guardar" : "save, to keep", "llorar" : "to cry", "margen" : "margin, edge, border, brink", "hallar" : "to ﬁnd[out]", "inmediatamente" : "immediately", "dolor" : "sorrow, ache, pain", "bomba" : "explosion, bomb, pump", "impresión" : "printing, impression", "respuesta" : "reply, answer", "culpa" : "fault, blame", "interesante" : "interesting", "añadir" : "to add", "argentino" : "Argentine" },
+        "top_words_50_17" : { "departamento" : "apartment, department", "durar" : "to last", "tirar" : "pull, to throw", "colegio" : "college, [high]school", "invitar" : "to invite", "marido" : "husband", "diario" : "daily", "naturalmente" : "naturally", "tarea" : "job, task", "acceso" : "entry, access", "impedir" : "hinder, to prevent", "crisis" : "crisis", "sala" : "hall, room", "actitud" : "attitude", "raro" : "scarce, rare, strange", "muerto" : "dead", "suerte" : "fortune, luck", "religioso" : "religious", "instalar" : "to install", "serie" : "series", "cubrir" : "to cover", "cercano" : "near", "argumento" : "plot, argument", "prueba" : "test, trial, proof", "hundir" : "submerge, to sink", "éxito" : "success", "absoluto" : "absolute", "interpretar" : "to interpret", "pleno" : "full, complete", "normal" : "regular, usual, normal", "funcionar" : "function, to work", "señalar" : "signal, to point[out]", "cuarto" : "fourth", "experimentar" : "experiment, to experience", "conocido" : "well-known, known", "mezclar" : "to mix", "paz" : "peace", "proyecto" : "plan, project", "caja" : "safe, box, bank", "rápido" : "fast, quick", "honor" : "honesty, honor", "capital" : "money[m], city[f], capital", "liberar" : "liberate, to free", "completar" : "to complete", "interior" : "inside, interior", "ajeno" : "detached, not belonging to", "despedir" : "dismiss, to say goodbye[to]", "chico" : "boy", "nacimiento" : "origin, birth", "seco" : "arid, dry" },
+        "top_words_50_18" : { "apoyo" : "backing, support", "dividir" : "to divide", "pesado" : "tiresome, boring, heavy", "texto" : "text", "reserva" : "reserve, reservation", "defender" : "protect, to defend", "pertenecer" : "to belong", "formación" : "education, formation", "boca" : "opening, entrance, mouth", "distancia" : "distance", "azul" : "blue", "opinar" : "be of the opinion, to think", "máquina" : "machine", "título" : "heading, title", "habitual" : "habitual, usual, customary", "negar" : "refuse, to deny", "llamada" : "knock, call", "ideal" : "goal, ideal", "suyo" : "yours[informal], theirs, hers, his", "directo" : "straight, direct", "método" : "method", "preciso" : "necessary, precise", "debajo" : "below, underneath", "averiguar" : "ﬁnd out, to investigate", "presión" : "pressure", "ignorar" : "to be unaware", "automóvil" : "automobile", "detrás" : "behind", "contenido" : "content, contents", "hija" : "daughter", "agosto" : "August", "cobrar" : "to charge[money]", "barco" : "ship, boat", "americano" : "American", "vender" : "to sell", "sesenta" : "sixty", "animar" : "to cheer up", "página" : "page", "notar" : "to notice", "árbol" : "tree", "plan" : "plan", "alcance" : "scope, reach", "regresar" : "to return[to a place]", "mandar" : "order, to send", "moda" : "form, fashion", "satisfacer" : "to satisfy", "curiosidad" : "quaintness, curiosity", "escuela" : "school", "memoria" : "memory", "espejo" : "reﬂection, mirror" },
+        "top_words_50_19" : { "elemento" : "element", "romper" : "to break", "matar" : "to kill", "cola" : "queue, line, tail", "juventud" : "youth", "trato" : "agreement, manner, treatment", "coche" : "carriage, car", "veinte" : "twenty", "acudir" : "frequent, go to, to attend", "examinar" : "inspect, to examine", "frío" : "cold", "simplemente" : "just, simply", "tensión" : "stress, tension, strain", "expresar" : "to express", "generación" : "generation", "manifestación" : "manifestation, protest", "terreno" : "terrain, earth, ground", "seguro" : "secure, sure, safe", "raza" : "lineage, race", "arrancar" : "uproot, to start[machine]", "sexual" : "sexual", "puesto" : "position, place, job", "familiar" : "of the family, familiar", "aprobar" : "approve, to pass[test]", "abajo" : "downward, below, down", "quejar" : "to complain", "juicio" : "judgment", "técnico" : "technical", "jardín" : "garden", "intervenir" : "to intervene", "público" : "audience, public", "consecuencia" : "consequence", "ritmo" : "rhythm", "perfectamente" : "perfectly", "feliz" : "fortunate, happy", "exacto" : "true, faithful, exact", "esposa" : "wife", "personaje" : "character[e.g. movie]", "patria" : "fatherland, native land", "inteligente" : "intelligent", "calidad" : "quality", "belleza" : "beauty", "continuo" : "continuous", "instrucción" : "instruction", "inclinación" : "incline, slope, tendency", "temperatura" : "temperature", "huella" : "track, trace, footstep", "mezcla" : "blend, mixture", "ciego" : "blind", "lejano" : "distant" },
+        "top_words_50_20" : { "gusto" : "preference, taste, pleasure", "ejercicio" : "practice, exercise", "hospital" : "hospital", "radio" : "communication[f], set[m], radio", "treinta" : "thirty", "conveniente" : "convenient", "salida" : "outcome, escape, exit", "sentimiento" : "sentiment, feeling", "salvar" : "rescue, to save", "mar" : "sea", "cuarto" : "chamber, room", "parar" : "to stop[moving]", "saber" : "knowledge", "cargo" : "fee, charge, position", "poesía" : "poem, poetry", "música" : "music", "estación" : "season, station", "justicia" : "fairness, justice", "brillante" : "sparkling, shiny, brilliant", "destino" : "destiny, destination", "revolución" : "revolution", "entrega" : "delivery", "sensación" : "feeling, sensation", "intelectual" : "intellectual", "representante" : "representative", "agudo" : "acute, sharp", "rato" : "while, moment, time", "doce" : "twelve", "salto" : "hop, jump, skip", "alegría" : "happiness, joy", "aun" : "still, even[though]", "operación" : "operation", "delicado" : "delicate", "nota" : "grade, note", "convencido" : "persuaded, convinced", "simple" : "simple-minded, mere, simple", "construcción" : "construction", "secretario" : "secretary", "exposición" : "display, exhibition", "internacional" : "international", "clave" : "key", "cruzar" : "to cross", "personal" : "personal", "pared" : "[interior]wall", "griego" : "Greek", "poderoso" : "powerful", "punta" : "point, tip", "mundial" : "worldwide", "especialmente" : "especially", "empleo" : "job, work, occupation" }
+
+
+
+      };
+		</script>
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="header clearfix">
+        <h3 class="text-muted">Spanish Practice</h3>
+      </div>
+
+      <div class="jumbotron">
+        <span id="mainTextDisplay" class="h1">Pick a word Group</span>
+        <p></p>
+        <p></p>
+        <p>
+          <span id="wordButtons" style="display: none;">
+            <a class="btn btn-lg btn-success" id="got_it" role="button" onclick="wordSuccess()">Got it!</a>
+            &nbsp;&nbsp;&nbsp;
+            <a class="btn btn-lg btn-danger" id="not_yet" role="button" onclick="wordFailure()">Not Yet</a>
+          </span>
+          <span id="definitionButton" style="display: none;">
+            <a class="btn btn-lg btn-info" role="button" onclick="nextWord()">Next</a>
+          </span>
+        </p>
+        <div id="wordsLeftSpan" style="display: none;">Words Left: <span id="wordsLeft"></span></div>
+      </div>
+
+      <div class="row marketing">
+        <div class="col-lg-10">
+          <h4>Top 1,000 Words (Groups of 5)</h4>
+          <p>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_1');">1 - 5</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_2');">6 - 10</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_3');">11 - 15</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_4');">16 - 20</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_5');">21 - 25</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_6');">26 - 30</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_7');">31 - 35</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_8');">36 - 40</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_9');">41 - 45</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_10');">46 - 50</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_11');">51 - 55</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_12');">56 - 60</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_13');">61 - 65</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_14');">66 - 70</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_15');">71 - 75</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_16');">76 - 80</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_17');">81 - 85</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_18');">86 - 90</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_19');">91 - 95</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_20');">96 - 100</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_21');">101 - 105</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_22');">106 - 110</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_23');">111 - 115</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_24');">116 - 120</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_25');">121 - 125</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_26');">126 - 130</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_27');">131 - 135</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_28');">136 - 140</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_29');">141 - 145</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_30');">146 - 150</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_31');">151 - 155</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_32');">156 - 160</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_33');">161 - 165</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_34');">166 - 170</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_35');">171 - 175</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_36');">176 - 180</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_37');">181 - 185</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_38');">186 - 190</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_39');">191 - 195</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_40');">196 - 200</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_41');">201 - 205</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_42');">206 - 210</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_43');">211 - 215</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_44');">216 - 220</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_45');">221 - 225</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_46');">226 - 230</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_47');">231 - 235</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_48');">236 - 240</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_49');">241 - 245</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_50');">246 - 250</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_51');">251 - 255</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_52');">256 - 260</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_53');">261 - 265</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_54');">266 - 270</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_55');">271 - 275</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_56');">276 - 280</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_57');">281 - 285</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_58');">286 - 290</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_59');">291 - 295</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_60');">296 - 300</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_61');">301 - 305</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_62');">306 - 310</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_63');">311 - 315</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_64');">316 - 320</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_65');">321 - 325</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_66');">326 - 330</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_67');">331 - 335</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_68');">336 - 340</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_69');">341 - 345</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_70');">346 - 350</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_71');">351 - 355</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_72');">356 - 360</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_73');">361 - 365</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_74');">366 - 370</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_75');">371 - 375</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_76');">376 - 380</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_77');">381 - 385</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_78');">386 - 390</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_79');">391 - 395</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_80');">396 - 400</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_81');">401 - 405</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_82');">406 - 410</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_83');">411 - 415</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_84');">416 - 420</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_85');">421 - 425</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_86');">426 - 430</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_87');">431 - 435</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_88');">436 - 440</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_89');">441 - 445</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_90');">446 - 450</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_91');">451 - 455</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_92');">456 - 460</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_93');">461 - 465</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_94');">466 - 470</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_95');">471 - 475</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_96');">476 - 480</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_97');">481 - 485</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_98');">486 - 490</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_99');">491 - 495</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_100');">496 - 500</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_101');">501 - 505</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_102');">506 - 510</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_103');">511 - 515</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_104');">516 - 520</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_105');">521 - 525</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_106');">526 - 530</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_107');">531 - 535</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_108');">536 - 540</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_109');">541 - 545</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_110');">546 - 550</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_111');">551 - 555</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_112');">556 - 560</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_113');">561 - 565</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_114');">566 - 570</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_115');">571 - 575</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_116');">576 - 580</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_117');">581 - 585</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_118');">586 - 590</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_119');">591 - 595</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_120');">596 - 600</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_121');">601 - 605</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_122');">606 - 610</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_123');">611 - 615</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_124');">616 - 620</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_125');">621 - 625</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_126');">626 - 630</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_127');">631 - 635</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_128');">636 - 640</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_129');">641 - 645</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_130');">646 - 650</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_131');">651 - 655</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_132');">656 - 660</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_133');">661 - 665</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_134');">666 - 670</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_135');">671 - 675</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_136');">676 - 680</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_137');">681 - 685</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_138');">686 - 690</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_139');">691 - 695</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_140');">696 - 700</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_141');">701 - 705</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_142');">706 - 710</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_143');">711 - 715</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_144');">716 - 720</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_145');">721 - 725</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_146');">726 - 730</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_147');">731 - 735</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_148');">736 - 740</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_149');">741 - 745</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_150');">746 - 750</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_151');">751 - 755</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_152');">756 - 760</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_153');">761 - 765</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_154');">766 - 770</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_155');">771 - 775</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_156');">776 - 780</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_157');">781 - 785</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_158');">786 - 790</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_159');">791 - 795</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_160');">796 - 800</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_161');">801 - 805</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_162');">806 - 810</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_163');">811 - 815</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_164');">816 - 820</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_165');">821 - 825</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_166');">826 - 830</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_167');">831 - 835</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_168');">836 - 840</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_169');">841 - 845</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_170');">846 - 850</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_171');">851 - 855</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_172');">856 - 860</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_173');">861 - 865</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_174');">866 - 870</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_175');">871 - 875</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_176');">876 - 880</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_177');">881 - 885</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_178');">886 - 890</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_179');">891 - 895</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_180');">896 - 900</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_181');">901 - 905</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_182');">906 - 910</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_183');">911 - 915</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_184');">916 - 920</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_185');">921 - 925</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_186');">926 - 930</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_187');">931 - 935</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_188');">936 - 940</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_189');">941 - 945</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_190');">946 - 950</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_191');">951 - 955</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_192');">956 - 960</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_193');">961 - 965</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_194');">966 - 970</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_195');">971 - 975</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_196');">976 - 980</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_197');">981 - 985</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_198');">986 - 990</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_199');">991 - 995</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_5_200');">996 - 1000</button>
+          </p>
+        </div>
+
+        <div class="col-lg-2">
+          <h4>Top 1,000 Words (Groups of 50)</h4>
+          <p>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_50_1');">1 - 50</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_50_2');">51 - 100</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_50_3');">101 - 150</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_50_4');">151 - 200</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_50_5');">201 - 250</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_50_6');">251 - 300</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_50_7');">301 - 350</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_50_8');">351 - 400</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_50_9');">401 - 450</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_50_10');">451 - 500</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_50_11');">501 - 550</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_50_12');">551 - 600</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_50_13');">601 - 650</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_50_14');">651 - 700</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_50_15');">701 - 750</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_50_16');">751 - 800</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_50_17');">801 - 850</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_50_18');">851 - 900</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_50_19');">901 - 950</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('top_words_50_20');">951 - 1000</button>
+
+        </div>
+      </div>
+
+      <footer class="footer">
+        <p>&copy; Umm No copyright :) </p>
+      </footer>
+    </div> <!-- /container -->
+  </body>
+</html>

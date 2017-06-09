@@ -1,0 +1,1000 @@
+la	the, "third person direct object"
+el	the
+que	which, that
+de	from, of
+en	on, in
+y	and
+a	at, to
+ser	to be[norm]
+no	no
+se	[“reﬂexive” marker]
+un	an, a
+lo	[3rd person][dir obj-m], the
+decir	say, to tell
+hacer	make, to do
+su	her, his, their, your[formal]
+haber	to have
+tener	to have
+me	me[obj]
+otro	another, other
+por	for, by, through
+con	with
+todo	every, all
+más	more
+para	to, for, in order to
+yo	I[subj]
+como	as, like
+si	whether, if
+poder	can, to be able to
+dar	to give
+le	[3rd person][indir obj]
+estar	to be
+pero	yet, but, except
+qué	which?, what?, how !
+este	this[m][esta[f]]
+entre	among, between
+pasar	spend[time], to pass
+mi	my
+uno	one
+primero	ﬁrst
+donde	where
+porque	because
+deber	ought to, should, to owe
+ese	that[m][esa[f]]
+sí	yes
+nos	us[obj]
+ni	neither, not even, nor
+sobre	over, on top of, about
+o	or
+cuando	when
+hombre	mankind, man, husband
+grande	great, large, big
+ir	to go
+alguno	someone[pron], some
+muy	really, very
+forma	shape, form, way
+cada	every, each
+algo	somewhat, something
+tres	three
+ya	still, already
+dos	two
+momento	time, moment
+menos	fewer, less
+hasta	up to, until, even
+vez	time[speciﬁc occurrence]
+así	like that
+esto	this[n]
+ver	to see
+cierto	true, sure, certain
+mundo	world
+poner	get , to put[on]
+sin	without
+punto	period, dot, point
+mucho	many, much, a lot
+después	after
+cosa	thing
+él	[ellos]them[m], he
+casi	nearly, almost
+llegar	to arrive
+tan	as, such, too, so
+también	also
+hablar	talk, to speak
+mujer	wife, woman
+ella	[ellas]them[f], she
+hora	time[speciﬁc], hour
+ahora	now
+propio	typical, proper, own
+saber	ﬁnd out, to know[a fact]
+tanto	so many, so much
+pensar	to think
+desde	since, from
+mejor	better , best
+niño	littleboy, child
+mismo	same
+tipo	kind, type
+pequeño	young, small, little
+te	you[obj formal]
+año	year
+allí	over there, there
+parte	portion, part
+vida	life
+trabajo	effort, job, work
+querer	love, to want
+nombre	noun, name
+casa	house
+país	country
+siempre	forever, always
+volver	to V again, to return
+tiempo	weather, time[general]
+mayor	main, older, larger
+eso	that[n]
+bajo	underneath, under
+nada	not]at all, nothing
+persona	person
+bien	well
+nuestro	our
+antes	before
+historia	story, history
+poco	few, little, a littlebit
+durante	for[time], during
+quien	whom, who
+lugar	position, place
+realidad	actuality, reality
+presentar	present, to introduce
+conocer	to know[someone or place]
+vivir	to live
+hecho	happening, fact
+entonces	then, so
+día	day
+salir	go out, to leave
+llamar	name, to call
+cuatro	four
+seguir	keep on, to follow
+recordar	remind, to remember
+cambio	change
+blanco	white
+sacar	to take out
+conseguir	obtain, acquire, to get
+aquel	that[over there]
+empezar	start, to begin
+modo	manner, way
+llevar	carry, to take
+amigo	friend
+tema	topic, subject, theme
+creer	think, to believe
+dejar	leave, to let
+existir	to exist
+verdad	truth
+aquí	here
+ciudad	city
+general	general
+sólo	just, only
+aunque	even though, although
+calle	street
+parecer	look like, to seem
+manera	manner, way
+recibir	to receive
+quedar	stay, to remain
+preguntar	to ask[a question]
+trabajar	to work
+esperar	expect, hope[for], to wait
+aceptar	to accept
+formar	to form
+hacia	towards, toward
+sino	except, but, rather
+aún	yet, still
+nunca	ever, never
+bueno	good
+caso	occasion, case
+mano	hand
+nuevo	new
+pueblo	village, people
+cuanto	regarding, en cuanto a: in terms of
+solo	alone, lonely
+sentir	regret, to feel
+medio	middle, half
+alcanzar	catch up with, to reach
+cuyo	whose
+jugar	game], to play[sport
+fuerza	power, force, strength
+tarde	evening, afternoon
+tal	such[a]
+posible	possible
+ejemplo	example
+tratar	deal with, treat, to try
+crear	to create
+encontrar	to ﬁnd
+ante	in the presence of, before
+ser	being
+aire	appearance, wind, air
+venir	to come
+escribir	to write
+viejo	aged, old
+palabra	word
+obra	deed, book, work
+ninguno	nobody[pron], none, no
+mí	me[obj prep]
+pues	well then, then
+situación	situation
+campo	country, ﬁeld
+luego	afterwards, later
+dentro	inside
+cuenta	account, bill
+cuerpo	body
+segundo	second
+cual	whom, who, which
+cambiar	to change
+ocurrir	occur, to happen
+luz	light
+anterior	preceding, previous
+menor	youngest, younger
+aparecer	to appear
+éste	[ésta[f]], this one[m]
+gente	people
+tomar	drink, to take
+escuchar	to listen to
+gracia	favor, grace, pl]thank you
+además	besides, as well, also
+gustar	to be pleasing to
+varios	various, several
+cabeza	head[part of body]
+efecto	effect
+mantener	maintain, to keep
+santo	saint[m]
+quizás	maybe, perhaps
+servicio	helpfulness, service
+cinco	ﬁve
+tierra	ground, land, earth
+cómo	how?
+comprender	to understand
+comer	to eat
+contar	count, to tell
+mil	thousand
+programa	plan, program
+distinto	different, distinct
+ahí	there
+último	ﬁnal, last
+don	gift, Mr, courtesy title[m]
+pedir	request, to ask for
+agua	[el]water
+abrir	to open
+valor	worth, value
+embargo	sin embargo: nevertheless
+fácil	easy
+nadie	anybody, nobody
+contrario	opposite, contrary
+imaginar	to imagine
+junto	next to, together with
+partido	[sports]match, group, party
+ciento	hundred
+leer	to read
+pregunta	question
+español	Spanish
+hoy	nowadays, today
+mesa	board, table
+cualquier	anyone[pron], any
+seguridad	safety, security
+mirar	watch, to look
+estudiar	to study
+lado	side
+mientras	as long as, whereas, while
+base	basis, base
+época	period, age, time
+claro	clear
+clase	order, class, kind
+quién	whom?, who?
+alto	high, tall
+problema	problem
+antiguo	former, ancient, old
+posibilidad	possibility
+vista	sight, view
+obtener	to obtain
+centro	downtown, middle, center
+carta	[playing]card, letter
+pobre	poor
+contra	opposite, against
+hijo	[pl]children, son
+mostrar	to show
+interés	interest
+término	end, term[language]
+buscar	to look for
+especial	special
+político	political
+desear	wish for, desire, to want
+necesario	necessary
+terminar	end, to ﬁnish
+perder	miss, to lose
+deseo	wish, desire
+padre	father
+tampoco	either, nor, neither
+señor	lord, Mr, sir
+resultar	turn out, to result
+función	meeting, function
+noche	evening, night
+largo	long
+familia	family
+desarrollar	to develop
+seis	six
+bajo	low, short
+producir	cause, to produce
+segundo	second
+inglés	English
+negro	black
+miedo	fear
+entrar	to enter
+dedicar	devote, to dedicate
+paso	pace, step
+usted	formal], you[subj
+río	river
+dirección	address, direction
+cuestión	matter, question
+derecho	law, justice, right
+malo	bad
+principio	principle, beginning
+guerra	warfare, war
+único	sole, unique, only
+avanzar	progress, to advance
+entender	to understand
+lanzar	launch, to throw
+diferencia	difference
+bueno	well…
+propiedad	property
+repetir	to repeat
+viaje	trip, travel
+nosotros	we[subj]
+diez	ten
+indicar	to indicate
+capaz	able, capable
+todavía	yet, still
+servir	to serve
+joven	young person, teenager
+comenzar	start, to begin
+idea	idea
+peso	load, weight, peso[money]
+ocho	eight
+estudio	learning, study
+grupo	group
+decidir	to decide
+considerar	to consider
+allá	over there, there
+mal	badly
+anunciar	advertise, to announce
+sociedad	society
+política	policy, politics
+detener	detain, to stop
+camino	path, route, road
+duda	doubt
+dinero	money
+millón	fortune, million
+abandonar	leave[a place], to abandon
+pieza	part, piece
+claro	clearly, of course
+movimiento	movement
+sitio	space, place
+arriba	above, up
+crecer	increase, to grow
+siglo	age, century
+necesidad	need, necessity
+verdadero	real, true
+doctor	doctor
+natural	natural
+contestar	reply, to answer
+mercado	market
+reconocer	admit, to recognize
+importante	important
+recurso	means, recourse, resource
+intentar	attempt, to try
+realizar	carry out, to fulﬁll
+mes	month
+golpe	punch, strike, hit
+grado	grade, degree
+morir	to die
+ojo	eye
+permitir	permit, to allow
+humano	human
+físico	physical
+convertir	become, change, to convert
+voz	voice
+incluso	even , including
+responsabilidad	responsibility
+bastante	quite a bit , fairly, rather
+profundo	profound, deep
+minuto	minute
+suelo	ﬂoor, ground
+traer	carry, to bring
+asegurar	insure, secure, to assure
+brazo	arm
+uso	use
+parecido	similar
+imagen	picture, image
+origen	cause, origin
+caer	to fall
+relación	relation, relationship
+apoyar	lean on, to support
+sangre	blood
+demás	others, the rest
+igual	same[as], equal
+edad	age
+cantidad	amount, quantity
+actuar	to act
+comprobar	prove, to verify
+comprar	to buy
+según	according to
+observar	to observe
+frente	frente a: across from, al frente: facing
+lograr	manage, get, to achieve
+puerta	door
+completo	complete
+moderno	modern
+atravesar	to cross
+maestro	master, teacher[m]
+oír	to hear
+adelante	further, forward
+diferente	separate, different
+delante	ahead, [in]front[of]
+sentido	feeling, sense
+imposible	impossible
+solamente	only
+libro	book
+directamente	straight away, directly
+lenguaje	speech, language
+ello	it[subj-n]
+difícil	hard, difﬁcult
+ofrecer	present, to offer
+sistema	system
+enorme	vast, enormous
+realmente	in fact, actually, really
+social	social
+abierto	unlocked, open
+subir	to go up
+evitar	prevent, to avoid
+superar	surpass, to overcome
+papel	part, role, paper
+surgir	spring[forth], to appear
+rojo	red
+pasado	last, past
+favor	beneﬁt, favor
+siguiente	next, following
+semana	week
+miembro	limb, member
+suponer	assume, to suppose
+puro	clean, pure
+carga	cargo, charge, load
+calor	warmth, heat
+enemigo	enemy
+tender	lay out, to tend to
+serio	serious
+madre	mother
+mover	incite, to move
+demasiado	too many, too much
+ganar	earn, to win
+lleno	ﬁlled, full
+altura	altitude, height
+civil	civil
+niña	young girl, child
+cara	expression, face
+metro	subway, meter
+cuidado	carefulness, care
+levantar	lift, to raise
+dios	divinity, god
+hermano	[pl]siblings, brother
+participar	to participate
+dónde	where?
+explicar	to explain
+libertad	liberty, freedom
+naturaleza	character, nature
+sol	sun
+popular	popular
+utilizar	utilize, to use
+voluntad	intention, willpower, will
+verde	green
+extraño	foreign, strange
+accidente	irregularity, accident
+económico	economic
+desaparecer	vanish, to disappear
+rico	tasty, rich
+olvidar	to forget
+zona	zone, area
+fuera	away, outside, out
+número	number
+estado	status, condition, state
+través	through, over, a través: across
+especie	species, sort, kind
+empresa	venture, company, ﬁrm
+cincuenta	ﬁfty
+nacer	to be born
+lengua	strip[of land], tongue, language
+usar	to use
+pagar	to pay
+tamaño	dimension, size
+revista	journal, magazine
+cerrado	closed
+frontera	frontier, border
+faltar	to be lacking
+animal	animal
+acción	deed, act, action
+correr	to run
+corazón	core, heart
+aprender	to learn
+enseñar	show, to teach
+quitar	take away, to remove
+mensaje	message
+analizar	to analyze
+bien	beneﬁt, property, goods
+público	public
+elegir	elect, to choose
+región	region
+policía	police ofﬁcer, police force, police
+comienzo	beginning, start
+suceder	to happen
+fondo	end, bottom
+amor	love
+resolver	work out, settle, to resolve
+vecino	neighbor
+actividad	action, activity
+corto	brief, short
+oportunidad	chance, opportunity
+derecha	right hand, right
+dirigir	manage, to direct
+unir	join[together], to unite
+muerte	death
+plantear	present, to propose
+gobierno	government
+compartir	to share
+sentar	seat, to sit[down]
+pensamiento	thinking, thought
+ley	rule, bill, law
+plano	level, map, plane
+tocar	play[instrument], to touch
+importancia	importance
+terrible	terrible
+línea	course, line
+temprano	early
+andar	function, to walk
+resultado	outcome, result
+espacio	room, space
+constituir	consist of, to constitute
+carrera	race, course, career
+mañana	tomorrow, morning
+frase	phrase
+reunión	reunion, meeting
+cultura	culture
+enfermedad	sickness, illness
+resto	leftover, remainder, rest
+literatura	literature
+fe	faith
+sueño	sleep, dream
+importar	import, to matter
+dispuesto	ready, willing
+compañero	classmate, companion
+depender	to depend on
+poder	power
+verano	summer
+acontecimiento	happening, event
+cumplir	to fulﬁll
+jamás	never
+tercero	third
+continuar	to continue
+arma	[el]weapon
+pie	base, foot
+esfuerzo	endeavor, effort
+condición	condition
+contribuir	to contribute
+cortar	to cut
+atender	attend to, to serve
+ayudar	to help
+color	color
+pasado	past
+lista	roll, roster, list
+famoso	well-known, famous
+falta	shortage, lack
+ocasión	occasion, opportunity
+visitar	to visit
+premio	reward, prize
+visita	guest, visitor, visit
+tu	formal], your[sg
+dedo	digit, toe, ﬁnger
+quince	ﬁfteen
+demostrar	demonstrate, to show
+despertar	arouse, to wake[up]
+existencia	life, existence
+mente	mind
+mayoría	majority
+conocimiento	knowledge
+examen	exam, examination
+teléfono	telephone, phone
+juego	sport, play, game
+mío	mine
+acto	action, act
+rama	limb, bough, branch
+libre	vacant, free
+recoger	to pick up
+inmediato	immediate
+nivel	level
+ciencia	knowledge, science
+ayuda	aid, help
+ambiente	atmosphere, environment
+imponer	enforce, to impose
+alemán	German
+casar	to marry
+masa	bulk, crowd, dough, mass
+clásico	classic
+futuro	future
+loco	insane, crazy
+atención	attention
+pegar	stick[on], to hit
+comida	meal, food
+capacidad	capacity
+ambos	both
+concreto	real, concrete
+ocupar	use, to occupy
+entrada	admission ticket, entrance
+tú	formal], you[subj-sg
+objetivo	objective
+disposición	disposition, disposal
+entregar	to deliver
+teatro	drama, theater
+cuál	which?
+volumen	volume
+francés	French
+cerca	near, close
+nueve	nine
+experiencia	experience
+descubrir	to discover
+pintura	paint, painting
+precisamente	precisely
+determinar	decide, to determine
+materia	subject, matter
+televisión	television, TV
+autoridad	authority
+hogar	hearth, home
+norteamericano	North American
+material	element, material
+cuándo	when?
+pintar	to paint
+energía	power, energy
+recuerdo	keepsake, memory
+conservar	preserve, to conserve
+meter	to put[into]
+santa	saint[f]
+común	common
+viajar	to travel
+discutir	discuss, to argue
+pasión	desire, passion
+vino	wine
+alma	[el]soul
+teoría	theory
+temer	to fear
+artista	performer, artist
+junto	together
+fecha	day, date
+sufrir	undergo, to suffer
+cielo	ceiling, heaven, sky
+temor	fear
+jefe	manager, boss, leader
+capítulo	chapter
+profesional	professional
+techo	roof
+presencia	appearance, presence
+separar	to separate
+decisión	decision
+absolutamente	completely, absolutely
+echar	cast, to throw
+nacional	national
+objeto	thing, object
+autor	author, writer
+aspecto	appearance, aspect
+seguramente	securely, surely
+resistir	endure, to resist
+responder	respond, to answer
+encima	in addition, on top, above
+acercar	to come near
+preparar	to prepare
+citar	quote, to cite
+extender	spread, to extend
+descansar	to rest
+asunto	affair, issue, matter
+fundamental	fundamental
+facilidad	facility, ease
+preocupar	to worry
+atrás	ago, behind, back
+empleado	employee
+pronto	quick, soon
+concepto	concept
+grave	solemn, serious
+retirar	retire, to take away
+establecer	to establish
+adquirir	get, to acquire
+costar	be hard, to cost
+mencionar	cite, to mention
+práctica	skill, practice
+publicar	to publish
+idioma	[speciﬁc]language
+aprovechar	to take advantage of
+futuro	future
+conclusión	end, conclusion
+vehículo	car, vehicle
+militar	military
+compañía	company
+curso	direction, course
+cine	US movie theater, cinema
+marcar	dial, note, to mark
+comentario	comment, remark
+vivo	bright, alive
+lucha	wrestle, struggle, ﬁght
+daño	damage, injury, harm
+intento	try, attempt
+enfermo	sick, ill
+piso	story, ﬂoor
+gesto	gesture
+derecho	straight, right
+actual	current
+diciembre	December
+economía	economics, economy, thriftiness
+introducir	bring in, to introduce
+totalmente	completely, totally
+cuánto	how much?
+posición	position
+lejos	off], far[away
+leche	milk
+conciencia	consciousness, conscience
+aplicar	to apply
+bajar	let down, to come down
+consejo	counsel, council, advice
+próximo	next
+piedra	rock, stone
+médico	doctor
+director	principal, manager, director
+recuperar	recover, to recuperate
+principal	principal, main
+cuento	tale, story
+mirada	look, gaze
+siete	seven
+duro	hard
+información	information
+espíritu	ghost, spirit
+artículo	item, product, article
+trasladar	transfer, to move
+hábito	habit
+positivo	positive
+expresión	expression
+exponer	expose, to expound
+letra	lyrics, handwriting, letter
+partida	departure, match, game
+sencillo	easy, plain, simple
+apenas	barely, hardly
+estilo	style
+perfecto	perfect
+vuelta	turn, return
+excepción	exception
+control	control
+esperanza	hope
+superior	upper, superior
+habitación	bedroom, room, habitat
+manejar	handle, to drive
+representar	to represent
+causa	cause
+semejante	alike, such, similar
+alrededor	round, around, about
+profesor	teacher, professor
+siquiera	even[if]
+acompañar	to accompany
+labor	task, work, labor
+trabajador	laborer, worker
+carácter	nature, personality
+cantar	to sing
+operar	to operate
+obstante	noobstante: nevertheless
+joven	young
+sexo	sex
+documento	document
+motivo	cause, motive
+construir	build, to construct
+opinión	view, opinion
+dominar	master, to dominate
+oscuro	obscure, dark
+acordar	remind, to remember
+generalmente	usually, generally
+cerrar	to close
+cadena	chain
+tras	behind, after
+repartir	distribute, deliver, to divide
+fenómeno	phenomenon
+proceso	procedure, process
+desarrollo	development
+contacto	contact
+dudar	to[have]doubt
+prestar	to lend
+guardar	save, to keep
+llorar	to cry
+margen	margin, edge, border, brink
+hallar	to ﬁnd[out]
+inmediatamente	immediately
+dolor	sorrow, ache, pain
+bomba	explosion, bomb, pump
+impresión	printing, impression
+respuesta	reply, answer
+culpa	fault, blame
+interesante	interesting
+añadir	to add
+argentino	Argentine
+departamento	apartment, department
+durar	to last
+tirar	pull, to throw
+colegio	college, [high]school
+invitar	to invite
+marido	husband
+diario	daily
+naturalmente	naturally
+tarea	job, task
+acceso	entry, access
+impedir	hinder, to prevent
+crisis	crisis
+sala	hall, room
+actitud	attitude
+raro	scarce, rare, strange
+muerto	dead
+suerte	fortune, luck
+religioso	religious
+instalar	to install
+serie	series
+cubrir	to cover
+cercano	near
+argumento	plot, argument
+prueba	test, trial, proof
+hundir	submerge, to sink
+éxito	success
+absoluto	absolute
+interpretar	to interpret
+pleno	full, complete
+normal	regular, usual, normal
+funcionar	function, to work
+señalar	signal, to point[out]
+cuarto	fourth
+experimentar	experiment, to experience
+conocido	well-known, known
+mezclar	to mix
+paz	peace
+proyecto	plan, project
+caja	safe, box, bank
+rápido	fast, quick
+honor	honesty, honor
+capital	money[m], city[f], capital
+liberar	liberate, to free
+completar	to complete
+interior	inside, interior
+ajeno	detached, not belonging to
+despedir	dismiss, to say goodbye[to]
+chico	boy
+nacimiento	origin, birth
+seco	arid, dry
+apoyo	backing, support
+dividir	to divide
+pesado	tiresome, boring, heavy
+texto	text
+reserva	reserve, reservation
+defender	protect, to defend
+pertenecer	to belong
+formación	education, formation
+boca	opening, entrance, mouth
+distancia	distance
+azul	blue
+opinar	be of the opinion, to think
+máquina	machine
+título	heading, title
+habitual	habitual, usual, customary
+negar	refuse, to deny
+llamada	knock, call
+ideal	goal, ideal
+suyo	yours[informal], theirs, hers, his
+directo	straight, direct
+método	method
+preciso	necessary, precise
+debajo	below, underneath
+averiguar	ﬁnd out, to investigate
+presión	pressure
+ignorar	to be unaware
+automóvil	automobile
+detrás	behind
+contenido	content, contents
+hija	daughter
+agosto	August
+cobrar	to charge[money]
+barco	ship, boat
+americano	American
+vender	to sell
+sesenta	sixty
+animar	to cheer up
+página	page
+notar	to notice
+árbol	tree
+plan	plan
+alcance	scope, reach
+regresar	to return[to a place]
+mandar	order, to send
+moda	form, fashion
+satisfacer	to satisfy
+curiosidad	quaintness, curiosity
+escuela	school
+memoria	memory
+espejo	reﬂection, mirror
+elemento	element
+romper	to break
+matar	to kill
+cola	queue, line, tail
+juventud	youth
+trato	agreement, manner, treatment
+coche	carriage, car
+veinte	twenty
+acudir	frequent, go to, to attend
+examinar	inspect, to examine
+frío	cold
+simplemente	just, simply
+tensión	stress, tension, strain
+expresar	to express
+generación	generation
+manifestación	manifestation, protest
+terreno	terrain, earth, ground
+seguro	secure, sure, safe
+raza	lineage, race
+arrancar	uproot, to start[machine]
+sexual	sexual
+puesto	position, place, job
+familiar	of the family, familiar
+aprobar	approve, to pass[test]
+abajo	downward, below, down
+quejar	to complain
+juicio	judgment
+técnico	technical
+jardín	garden
+intervenir	to intervene
+público	audience, public
+consecuencia	consequence
+ritmo	rhythm
+perfectamente	perfectly
+feliz	fortunate, happy
+exacto	true, faithful, exact
+esposa	wife
+personaje	character[e.g. movie]
+patria	fatherland, native land
+inteligente	intelligent
+calidad	quality
+belleza	beauty
+continuo	continuous
+instrucción	instruction
+inclinación	incline, slope, tendency
+temperatura	temperature
+huella	track, trace, footstep
+mezcla	blend, mixture
+ciego	blind
+lejano	distant
+gusto	preference, taste, pleasure
+ejercicio	practice, exercise
+hospital	hospital
+radio	communication[f], set[m], radio
+treinta	thirty
+conveniente	convenient
+salida	outcome, escape, exit
+sentimiento	sentiment, feeling
+salvar	rescue, to save
+mar	sea
+cuarto	chamber, room
+parar	to stop[moving]
+saber	knowledge
+cargo	fee, charge, position
+poesía	poem, poetry
+música	music
+estación	season, station
+justicia	fairness, justice
+brillante	sparkling, shiny, brilliant
+destino	destiny, destination
+revolución	revolution
+entrega	delivery
+sensación	feeling, sensation
+intelectual	intellectual
+representante	representative
+agudo	acute, sharp
+rato	while, moment, time
+doce	twelve
+salto	hop, jump, skip
+alegría	happiness, joy
+aun	still, even[though]
+operación	operation
+delicado	delicate
+nota	grade, note
+convencido	persuaded, convinced
+simple	simple-minded, mere, simple
+construcción	construction
+secretario	secretary
+exposición	display, exhibition
+internacional	international
+clave	key
+cruzar	to cross
+personal	personal
+pared	[interior]wall
+griego	Greek
+poderoso	powerful
+punta	point, tip
+mundial	worldwide
+especialmente	especially
+empleo	job, work, occupation
