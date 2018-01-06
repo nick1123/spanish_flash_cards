@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Spanish Practice</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/jumbotron-narrow.css" rel="stylesheet">
+
+    <script>
+
+      function shuffle(arr) {
+        var i,
+            j,
+            temp;
+        for (i = arr.length - 1; i > 0; i--) {
+          j = Math.floor(Math.random() * (i + 1));
+          temp = arr[i];
+          arr[i] = arr[j];
+          arr[j] = temp;
+        }
+        return arr;    
+      };
+
+      function setup(initialPhraseIndexArray)
+      {
+        phraseIndexArray = initialPhraseIndexArray
+        allDone = false;
+        nextWord();
+      }
+
+      function nextWord()
+      {
+        updateWordsLeft();
+
+        if (phraseIndexArray.length == 0) {
+          document.getElementById("mainTextDisplay").textContent = "All Done!";
+          document.getElementById('definitionButton').style.display = 'none';
+          document.getElementById('wordButtons').style.display = 'none';
+        } else {
+          currentPhraseIndex = phraseIndexArray.pop();
+          currentSpanishWord = masterListOfPhrases[currentPhraseIndex]["spanish"];
+          document.getElementById("mainTextDisplay").textContent = currentSpanishWord;
+          document.getElementById('definitionButton').style.display = 'none';
+          document.getElementById('wordButtons').style.display = 'block';
+        }
+      }
+
+      function updateWordsLeft()
+      {
+        document.getElementById('wordsLeftSpan').style.display = 'block';
+        document.getElementById("wordsLeft").textContent = phraseIndexArray.length;
+      }
+
+      function wordSuccess()
+      {
+        nextWord();
+      }
+
+      function wordFailure()
+      {
+        document.getElementById('definitionButton').style.display = 'block';
+        document.getElementById('wordButtons').style.display = 'none';
+        document.getElementById("mainTextDisplay").textContent = currentSpanishWord + " => " + masterListOfPhrases[currentPhraseIndex]["english"];
+
+        phraseIndexArray.push(currentPhraseIndex);
+        phraseIndexArray.push(currentPhraseIndex);
+        phraseIndexArray.push(currentPhraseIndex);
+
+        phraseIndexArray = shuffle(phraseIndexArray);
+        
+        updateWordsLeft();
+      }
+
+
+      var phraseIndexArray;
+      var currentPhraseIndex;
+      var allDone;
+
+      var masterListOfPhrases = {
+        "1" : { "spanish" : "En el cómputo global de las cosas", "english" : "In the global computation of things" },
+        "2" : { "spanish" : "si debemos hacer un recuento", "english" : "if we must do a recount" },
+        "3" : { "spanish" : "No me dejas ser infeliz a pesar de mis intentos", "english" : "You do not let me be unhappy despite my attempts" },
+        "4" : { "spanish" : "Eres como un querubín que vuela y vuela y vuela", "english" : "You are like a cherub who flies and flies and flies" },
+        "5" : { "spanish" : "Cantando canciones de amor cerca de mí aunque me duela", "english" : "Singing love songs close to me even if it hurts" },
+        "6" : { "spanish" : "Es el sol detrás de tu risa", "english" : "It's the sun behind your laughter" },
+        "7" : { "spanish" : "Que me ciega y me deslumbra", "english" : "That blinds me and dazzles me" },
+        "8" : { "spanish" : "Y tu piel que roza la mía", "english" : "And your skin that touches mine" },
+        "9" : { "spanish" : "Pero aún no se acostumbra", "english" : "But it is not yet used" },
+        "10" : { "spanish" : "Es la luz detrás de tus ojos", "english" : "It's the light behind your eyes" },
+        "11" : { "spanish" : "Que ilumina mi penumbra", "english" : "That illuminates my gloom" },
+        "12" : { "spanish" : "Y que va brillando más fuerte y soy feliz, muy feliz", "english" : "And that is shining stronger and I am happy, very happy" },
+        "13" : { "spanish" : "Y me das toneladas masivas de amor", "english" : "And you give me massive tons of love" },
+        "14" : { "spanish" : "No dejas un respiro a mi corazón", "english" : "You never leave a breath for my heart" },
+        "15" : { "spanish" : "Tú me armas, me desarmas", "english" : "You arm me, you disarm me" },
+        "16" : { "spanish" : "Nunca me dejas caer Tan bajo me levantas", "english" : "You never let me fall So low you pick me up" },
+        "17" : { "spanish" : "Para mí este mundo sin tí no sería más que un mal invento", "english" : "For me this world without you would not be more than a bad invention" },
+        "18" : { "spanish" : "Una pésima combinación de mucho estrés y aburrimiento", "english" : "A terrible combination of a lot of stress and boredom" },
+        "19" : { "spanish" : "Y si no fuera por ti, habría renunciado a mis sueños", "english" : "And if it were not for you, I would have given up on my dreams" },
+        "20" : { "spanish" : "Y si no fuera por ti, iría como un perro sin dueño", "english" : "And if it were not for you, I would go like a dog without an owner" },
+        "21" : { "spanish" : "Solo tú con media palabra", "english" : "Only you with half a word" },
+        "22" : { "spanish" : "Me construyes o me derrumbas", "english" : "You build me or you break me" },
+        "23" : { "spanish" : "Junto a ti me siento mas fuerte y soy feliz, muy feliz", "english" : "Next to you I feel stronger and I am happy, very happy" },
+      };
+
+    </script>
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="header clearfix">
+        <h3 class="text-muted">Spanish Practice</h3>
+      </div>
+
+      <div class="jumbotron">
+        <span id="mainTextDisplay" class="h1">Pick a Phrase</span>
+        <p></p>
+        <p></p>
+        <p>
+          <span id="wordButtons" style="display: none;">
+            <a class="btn btn-lg btn-success" id="got_it" role="button" onclick="wordSuccess()">Got it!</a>
+            &nbsp;&nbsp;&nbsp;
+            <a class="btn btn-lg btn-danger" id="not_yet" role="button" onclick="wordFailure()">Not Yet</a>
+          </span>
+          <span id="definitionButton" style="display: none;">
+            <a class="btn btn-lg btn-info" role="button" onclick="nextWord()">Next</a>
+          </span>
+        </p>
+        <div id="wordsLeftSpan" style="display: none;">Words Left: <span id="wordsLeft"></span></div>
+      </div>
+
+      <div class="row marketing">
+        <div class="col-lg-12">
+          <h4>Phrases</h4>
+          <p>
+
+            <button type="button" class="btn btn-lg btn-info" onclick="setup( ['1'] );">1</button>
+            <button type="button" class="btn btn-lg btn-info" onclick="setup( ['2'] );">2</button>
+            <button type="button" class="btn btn-lg btn-info" onclick="setup( ['3'] );">3</button>
+            <button type="button" class="btn btn-lg btn-info" onclick="setup( ['4'] );">4</button>
+            <button type="button" class="btn btn-lg btn-info" onclick="setup( ['5'] );">5</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup( ['1', '2', '3', '4', '5'] );">1 - 5</button>
+            <br>
+            <button type="button" class="btn btn-lg btn-info" onclick="setup( ['6'] );">6</button>
+            <button type="button" class="btn btn-lg btn-info" onclick="setup( ['7'] );">7</button>
+            <button type="button" class="btn btn-lg btn-info" onclick="setup( ['8'] );">8</button>
+            <button type="button" class="btn btn-lg btn-info" onclick="setup( ['9'] );">9</button>
+            <button type="button" class="btn btn-lg btn-info" onclick="setup( ['10'] );">10</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup( ['6', '7', '8', '9', '10'] );">6 - 10</button>
+            <br>
+            <button type="button" class="btn btn-lg btn-info" onclick="setup( ['11'] );">11</button>
+            <button type="button" class="btn btn-lg btn-info" onclick="setup( ['12'] );">12</button>
+            <button type="button" class="btn btn-lg btn-info" onclick="setup( ['13'] );">13</button>
+            <button type="button" class="btn btn-lg btn-info" onclick="setup( ['14'] );">14</button>
+            <button type="button" class="btn btn-lg btn-info" onclick="setup( ['15'] );">15</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup( ['11', '12', '13', '14', '15'] );">11 - 15</button>
+            <br>
+            <button type="button" class="btn btn-lg btn-info" onclick="setup( ['16'] );">16</button>
+            <button type="button" class="btn btn-lg btn-info" onclick="setup( ['17'] );">17</button>
+            <button type="button" class="btn btn-lg btn-info" onclick="setup( ['18'] );">18</button>
+            <button type="button" class="btn btn-lg btn-info" onclick="setup( ['19'] );">19</button>
+            <button type="button" class="btn btn-lg btn-info" onclick="setup( ['20'] );">20</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup( ['16', '17', '18', '19', '20'] );">16 - 20</button>
+            <br>
+            <button type="button" class="btn btn-lg btn-info" onclick="setup( ['21'] );">21</button>
+            <button type="button" class="btn btn-lg btn-info" onclick="setup( ['22'] );">22</button>
+            <button type="button" class="btn btn-lg btn-info" onclick="setup( ['23'] );">23</button>
+            <button type="button" class="btn btn-lg btn-success" onclick="setup( ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23'] );">1 - 23</button>
+
+          </p>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <p>&copy; Umm No copyright :) </p>
+      </footer>
+    </div> <!-- /container -->
+  </body>
+</html>
