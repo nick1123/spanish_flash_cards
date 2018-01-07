@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Spanish Practice</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/jumbotron-narrow.css" rel="stylesheet">
+
+    <script>
+
+      function shuffle(arr) {
+        var i,
+            j,
+            temp;
+        for (i = arr.length - 1; i > 0; i--) {
+          j = Math.floor(Math.random() * (i + 1));
+          temp = arr[i];
+          arr[i] = arr[j];
+          arr[j] = temp;
+        }
+        return arr;    
+      };
+
+      function setup(initialPhraseIndexArray)
+      {
+        phraseIndexArray = initialPhraseIndexArray
+        allDone = false;
+        nextWord();
+      }
+
+      function nextWord()
+      {
+        updateWordsLeft();
+
+        if (phraseIndexArray.length == 0) {
+          document.getElementById("mainTextDisplay").textContent = "All Done!";
+          document.getElementById('definitionButton').style.display = 'none';
+          document.getElementById('wordButtons').style.display = 'none';
+        } else {
+          currentPhraseIndex = phraseIndexArray.pop();
+          currentSpanishWord = masterListOfPhrases[currentPhraseIndex]["spanish"];
+          document.getElementById("mainTextDisplay").textContent = currentSpanishWord;
+          document.getElementById('definitionButton').style.display = 'none';
+          document.getElementById('wordButtons').style.display = 'block';
+        }
+      }
+
+      function updateWordsLeft()
+      {
+        document.getElementById('wordsLeftSpan').style.display = 'block';
+        document.getElementById("wordsLeft").textContent = phraseIndexArray.length;
+      }
+
+      function wordSuccess()
+      {
+        nextWord();
+      }
+
+      function wordFailure()
+      {
+        document.getElementById('definitionButton').style.display = 'block';
+        document.getElementById('wordButtons').style.display = 'none';
+        document.getElementById("mainTextDisplay").textContent = currentSpanishWord + " => " + masterListOfPhrases[currentPhraseIndex]["english"];
+
+        phraseIndexArray.push(currentPhraseIndex);
+        phraseIndexArray.push(currentPhraseIndex);
+        phraseIndexArray.push(currentPhraseIndex);
+
+        phraseIndexArray = shuffle(phraseIndexArray);
+        
+        updateWordsLeft();
+      }
+
+
+      var phraseIndexArray;
+      var currentPhraseIndex;
+      var allDone;
+
+      var masterListOfPhrases = {
+        "1" : { "spanish" : "en", "english" : "on, in" },
+        "2" : { "spanish" : "el", "english" : "the" },
+        "3" : { "spanish" : "cómputo", "english" : "calculation" },
+        "4" : { "spanish" : "global", "english" : "worldwide" },
+        "5" : { "spanish" : "de", "english" : "of, from" },
+        "6" : { "spanish" : "las", "english" : "the" },
+        "7" : { "spanish" : "cosas", "english" : "things" },
+        "8" : { "spanish" : "si", "english" : "if" },
+        "9" : { "spanish" : "debemos", "english" : "deber; obligation, duty, debt" },
+        "10" : { "spanish" : "hacer", "english" : "to do, to make" },
+        "11" : { "spanish" : "un", "english" : "a" },
+        "12" : { "spanish" : "recuento", "english" : "recount, looking back, or taking stock" },
+        "13" : { "spanish" : "no", "english" : "no" },
+        "14" : { "spanish" : "me", "english" : "me, myself" },
+        "15" : { "spanish" : "dejas", "english" : "dejar; to leave, to let, allow" },
+        "16" : { "spanish" : "ser", "english" : "to be" },
+        "17" : { "spanish" : "infeliz", "english" : "unhappy" },
+        "18" : { "spanish" : "a", "english" : "to" },
+        "19" : { "spanish" : "pesar", "english" : "to weigh, to ponder" },
+        "20" : { "spanish" : "mis", "english" : "my" },
+        "21" : { "spanish" : "intentos", "english" : "attempt" },
+        "22" : { "spanish" : "eres", "english" : "ser; to be" },
+        "23" : { "spanish" : "como", "english" : "like, how" },
+        "24" : { "spanish" : "querubín", "english" : "cherub" },
+        "25" : { "spanish" : "que", "english" : "that" },
+        "26" : { "spanish" : "vuela", "english" : "volar; to fly, blow up, anger" },
+        "27" : { "spanish" : "y", "english" : "and" },
+        "28" : { "spanish" : "cantando", "english" : "cantar; to sing" },
+        "29" : { "spanish" : "canciones", "english" : "song" },
+        "30" : { "spanish" : "amor", "english" : "love" },
+        "31" : { "spanish" : "cerca", "english" : "close; near; around" },
+        "32" : { "spanish" : "mí", "english" : "me" },
+        "33" : { "spanish" : "aunque", "english" : "and though; although; even though; even if, irrespective of" },
+        "34" : { "spanish" : "duela", "english" : "doler; to hurt; to ache, to grieve" },
+        "35" : { "spanish" : "es", "english" : "ser; to be" },
+        "36" : { "spanish" : "sol", "english" : "sun, sunlight, daylight" },
+        "37" : { "spanish" : "detrás", "english" : "behind, at the rear, after" },
+        "38" : { "spanish" : "tu", "english" : "your" },
+        "39" : { "spanish" : "risa", "english" : "laugh, laughter" },
+        "40" : { "spanish" : "ciega", "english" : "ciego; a blind person" },
+        "41" : { "spanish" : "deslumbra", "english" : "deslumbrar; to dazzle, to blind temporarily, amaze" },
+        "42" : { "spanish" : "piel", "english" : "skin, fur" },
+        "43" : { "spanish" : "roza", "english" : "rozar; to clear or scrape land, to graze" },
+        "44" : { "spanish" : "la", "english" : "the" },
+        "45" : { "spanish" : "mía", "english" : "mine" },
+        "46" : { "spanish" : "pero", "english" : "but" },
+        "47" : { "spanish" : "aún", "english" : "still, yet" },
+        "48" : { "spanish" : "se", "english" : "Third person (also used for usted and ustedes) reflexive direct or indirect object oneself, himself, herself, itself, yourself; each other; one another" },
+        "49" : { "spanish" : "acostumbra", "english" : "acostumbrar; to get accustomed to" },
+        "50" : { "spanish" : "luz", "english" : "light" },
+        "51" : { "spanish" : "tus", "english" : "your" },
+        "52" : { "spanish" : "ojos", "english" : "eyes" },
+        "53" : { "spanish" : "ilumina", "english" : "iluminar; illuminate, enlighten" },
+        "54" : { "spanish" : "mi", "english" : "my" },
+        "55" : { "spanish" : "penumbra", "english" : "shadow, gloom, low light" },
+        "56" : { "spanish" : "va", "english" : "ir; to go" },
+        "57" : { "spanish" : "brillando", "english" : "brillar; to shine" },
+        "58" : { "spanish" : "más", "english" : "more" },
+        "59" : { "spanish" : "fuerte", "english" : "strong, loud" },
+        "60" : { "spanish" : "soy", "english" : "ser; to be" },
+        "61" : { "spanish" : "feliz", "english" : "happy" },
+        "62" : { "spanish" : "muy", "english" : "very" },
+        "63" : { "spanish" : "das", "english" : "dar; to give" },
+        "64" : { "spanish" : "toneladas", "english" : "tons" },
+        "65" : { "spanish" : "masivas", "english" : "massive" },
+        "66" : { "spanish" : "respiro", "english" : "respirar; to breathe" },
+        "67" : { "spanish" : "corazón", "english" : "heart" },
+        "68" : { "spanish" : "tú", "english" : "you" },
+        "69" : { "spanish" : "armas", "english" : "armar; to arm, organize, provoke" },
+        "70" : { "spanish" : "desarmas", "english" : "desarmar; to disarm" },
+        "71" : { "spanish" : "nunca", "english" : "never, ever" },
+        "72" : { "spanish" : "caer", "english" : "to fall" },
+        "73" : { "spanish" : "tan", "english" : "so, as" },
+        "74" : { "spanish" : "bajo", "english" : "short, low, mean, despicable" },
+        "75" : { "spanish" : "levantas", "english" : "levantar; to lift, increase," },
+        "76" : { "spanish" : "para", "english" : "for, to" },
+        "77" : { "spanish" : "este", "english" : "this" },
+        "78" : { "spanish" : "mundo", "english" : "world, society" },
+        "79" : { "spanish" : "sin", "english" : "without" },
+        "80" : { "spanish" : "tí", "english" : "you" },
+        "81" : { "spanish" : "sería", "english" : "ser; to be; \"I wouldn't be\"" },
+        "82" : { "spanish" : "mal", "english" : "bad" },
+        "83" : { "spanish" : "invento", "english" : "invention" },
+        "84" : { "spanish" : "una", "english" : "a" },
+        "85" : { "spanish" : "pésima", "english" : "pésimo; superlative degree of malo: very bad; terrible" },
+        "86" : { "spanish" : "combinación", "english" : "combination" },
+        "87" : { "spanish" : "mucho", "english" : "much" },
+        "88" : { "spanish" : "estrés", "english" : "stress" },
+        "89" : { "spanish" : "aburrimiento", "english" : "boredom" },
+        "90" : { "spanish" : "fuera", "english" : "ser; to be; \"I would be\"" },
+        "91" : { "spanish" : "por", "english" : "by, for, through, across" },
+        "92" : { "spanish" : "ti", "english" : "you" },
+        "93" : { "spanish" : "habría", "english" : "haber; to have; \"had been\"" },
+        "94" : { "spanish" : "renunciado", "english" : "renunciar; to renounce" },
+        "95" : { "spanish" : "sueños", "english" : "sleep, dreams" },
+        "96" : { "spanish" : "iría", "english" : "ir; to go; \"I would go\"" },
+        "97" : { "spanish" : "perro", "english" : "dog" },
+        "98" : { "spanish" : "dueño", "english" : "owner, proprietor, landlord, master" },
+        "99" : { "spanish" : "solo", "english" : "sole, only, unique, single, lonely" },
+        "100" : { "spanish" : "con", "english" : "with" },
+        "101" : { "spanish" : "media", "english" : "half" },
+        "102" : { "spanish" : "palabra", "english" : "word" },
+        "103" : { "spanish" : "construyes", "english" : "construir; to build, construct" },
+        "104" : { "spanish" : "o", "english" : "or" },
+        "105" : { "spanish" : "derrumbas", "english" : "derrumbar; to demolish" },
+        "106" : { "spanish" : "junto", "english" : "together, joined, next to" },
+        "107" : { "spanish" : "siento", "english" : "sentir; to feel, regret; \"I feel\"" },
+        "108" : { "spanish" : "mas", "english" : "but, however" },
+      };
+
+    </script>
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="header clearfix">
+        <h3 class="text-muted">Spanish Practice</h3>
+      </div>
+
+      <div class="jumbotron">
+        <span id="mainTextDisplay" class="h1">Pick a Phrase</span>
+        <p></p>
+        <p></p>
+        <p>
+          <span id="wordButtons" style="display: none;">
+            <a class="btn btn-lg btn-success" id="got_it" role="button" onclick="wordSuccess()">Got it!</a>
+            &nbsp;&nbsp;&nbsp;
+            <a class="btn btn-lg btn-danger" id="not_yet" role="button" onclick="wordFailure()">Not Yet</a>
+          </span>
+          <span id="definitionButton" style="display: none;">
+            <a class="btn btn-lg btn-info" role="button" onclick="nextWord()">Next</a>
+          </span>
+        </p>
+        <div id="wordsLeftSpan" style="display: none;">Words Left: <span id="wordsLeft"></span></div>
+      </div>
+
+      <div class="row marketing">
+        <div class="col-lg-12">
+          <h4>Phrases</h4>
+          <p>
+
+            <button type="button" class="btn btn-info" onclick="setup( ['1', '2', '3', '4', '5'] );">1 - 5</button>
+            <button type="button" class="btn btn-info" onclick="setup( ['6', '7', '8', '9', '10'] );">6 - 10</button>
+            <button type="button" class="btn btn-info" onclick="setup( ['11', '12', '13', '14', '15'] );">11 - 15</button>
+            <button type="button" class="btn btn-info" onclick="setup( ['16', '17', '18', '19', '20'] );">16 - 20</button>
+            <button type="button" class="btn btn-info" onclick="setup( ['21', '22', '23', '24', '25'] );">21 - 25</button>
+            <button type="button" class="btn btn-primary" onclick="setup( ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25'] );">1 - 25</button>
+            <br>
+            <button type="button" class="btn btn-info" onclick="setup( ['26', '27', '28', '29', '30'] );">26 - 30</button>
+            <button type="button" class="btn btn-info" onclick="setup( ['31', '32', '33', '34', '35'] );">31 - 35</button>
+            <button type="button" class="btn btn-info" onclick="setup( ['36', '37', '38', '39', '40'] );">36 - 40</button>
+            <button type="button" class="btn btn-info" onclick="setup( ['41', '42', '43', '44', '45'] );">41 - 45</button>
+            <button type="button" class="btn btn-info" onclick="setup( ['46', '47', '48', '49', '50'] );">46 - 50</button>
+            <button type="button" class="btn btn-primary" onclick="setup( ['26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '49', '50'] );">26 - 50</button>
+            <br>
+            <button type="button" class="btn btn-info" onclick="setup( ['51', '52', '53', '54', '55'] );">51 - 55</button>
+            <button type="button" class="btn btn-info" onclick="setup( ['56', '57', '58', '59', '60'] );">56 - 60</button>
+            <button type="button" class="btn btn-info" onclick="setup( ['61', '62', '63', '64', '65'] );">61 - 65</button>
+            <button type="button" class="btn btn-info" onclick="setup( ['66', '67', '68', '69', '70'] );">66 - 70</button>
+            <button type="button" class="btn btn-info" onclick="setup( ['71', '72', '73', '74', '75'] );">71 - 75</button>
+            <button type="button" class="btn btn-primary" onclick="setup( ['51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '71', '72', '73', '74', '75'] );">51 - 75</button>
+            <br>
+            <button type="button" class="btn btn-info" onclick="setup( ['76', '77', '78', '79', '80'] );">76 - 80</button>
+            <button type="button" class="btn btn-info" onclick="setup( ['81', '82', '83', '84', '85'] );">81 - 85</button>
+            <button type="button" class="btn btn-info" onclick="setup( ['86', '87', '88', '89', '90'] );">86 - 90</button>
+            <button type="button" class="btn btn-info" onclick="setup( ['91', '92', '93', '94', '95'] );">91 - 95</button>
+            <button type="button" class="btn btn-info" onclick="setup( ['96', '97', '98', '99', '100'] );">96 - 100</button>
+            <button type="button" class="btn btn-primary" onclick="setup( ['76', '77', '78', '79', '80', '81', '82', '83', '84', '85', '86', '87', '88', '89', '90', '91', '92', '93', '94', '95', '96', '97', '98', '99', '100'] );">76 - 100</button>
+            <br>
+            <button type="button" class="btn btn-info" onclick="setup( ['101', '102', '103', '104', '105'] );">101 - 105</button>
+            <button type="button" class="btn btn-info" onclick="setup( ['106', '107', '108'] );">106 - 108</button>
+            <button type="button" class="btn btn-primary" onclick="setup( ['101', '102', '103', '104', '105', '106', '107', '108'] );">101 - 108</button>
+            <button type="button" class="btn btn-success" onclick="setup( ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '49', '50', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '71', '72', '73', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85', '86', '87', '88', '89', '90', '91', '92', '93', '94', '95', '96', '97', '98', '99', '100', '101', '102', '103', '104', '105', '106', '107', '108'] );">1 - 108</button>
+
+          </p>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <p>&copy; Umm No copyright :) </p>
+      </footer>
+    </div> <!-- /container -->
+  </body>
+</html>
