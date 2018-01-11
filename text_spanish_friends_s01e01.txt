@@ -1,0 +1,428 @@
+{50}{150}FRIENDS
+{210}{460}101|The one where it all began
+{1360}{1450}¡No hay nada que contar!|¡Sólo es un compañero mas!
+{1450}{1507}¡Vamos, vas a salir con ese tipo!
+{1510}{1570}¡Algo raro tiene que tener!
+{1567}{1622}Ok, Joey,|sé amable.
+{1630}{1700}¿Que pasa, tiene joroba?|¿Joroba y bisoñé?
+{1732}{1787}Espera, ¿suele mascar tiza?
+{1792}{1872}¡No me gustaría que pasase por|lo que pasé yo con Carl!
+{1870}{1915}Calma todos.
+{1912}{1975}Ni siquiera es una cita.
+{1972}{2065}Solo somos dos personas que van a cenar|y no tendrán sexo.
+{2095}{2147}A mi me suena a cita.
+{2202}{2280}Añoche soñé que estaba de pie|en medio de la cafetería...
+{2275}{2342}y me di cuenta que estaba|completamente desnudo.
+{2350}{2400}Es muy comun.|Yo he soñado eso.
+{2410}{2492}Entonces mire hacia abajo|y vi que tenía un teléfono...
+{2515}{2555}ahí.
+{2622}{2667}-¿En vez de...?|-¡Exacto!
+{2665}{2712}Eso no lo he soñado nunca...
+{2710}{2785}En aquel momento el teléfono empezó a sonar...
+{2815}{2892}y yo no sabía qué hacer,|todo el mundo comenzó a mirarme...
+{2890}{2955}Entonces,|¿no te estaban mirando antes?
+{2982}{3052}Finalmente pensé:|"Mejor contesto".
+{3070}{3132}Y resultó que era mi madre...
+{3175}{3260}Lo cual es muy, muy extraño porqué...|ella no me llama nunca.
+{3507}{3585}Este tipo dice "Hola"|y me dan ganas de suicidarme.
+{3582}{3630}¿Estás bien cariño?
+{3642}{3752}Me siento como si alguien me hubiese metido la mano|por la garganta, me hubiese sacado el intestino...
+{3762}{3835}-por la boca y me lo hubiese atado al cuello.|-¿Una galleta?
+{3882}{3932}Carol se mudó hoy.
+{3942}{4010}-Te traeré un café.|-Gracias.
+{4092}{4157}¡No, No!|¡Deja de limpiar mi aura!
+{4212}{4272}Deja mi aura en paz|¿De acuerdo?
+{4272}{4315}Ok.|Esta bien.
+{4332}{4425}Voy a estar bien, ¿de acuerdo?|Espero que ella sea muy feliz.
+{4422}{4447}No es cierto.
+{4445}{4525}Claro que no, que se vaya al infierno,|ella me abandonó.
+{4527}{4595}¿Y tu no sabías que era lesbiana?
+{4672}{4795}¡No! ¡No lo sabía!|¿Por qué todo el mundo alucina con eso?
+{4827}{4892}Si ella no lo sabía,|¿Como iba a saberlo yo?
+{4947}{5010}A veces me gustaría ser lesbiana...
+{5052}{5107}¿Dije eso en voz alta?
+{5157}{5250}Le conté a papá y a mamá anoche.|Parece que lo tomaron bastante bien.
+{5250}{5382}¿Oh, en serio? Entonces esa histerica llamada|telefónica que recibí de una mujer|llorando a las tres de la mañana:
+{5377}{5432}"Nunca tendré nietos,|nunca tendré nietos"
+{5430}{5485}¿Qué era?|¿Número equivocado?
+{5490}{5522}Disculpa.
+{5532}{5610}Esta bien Ross, mira.|Se que estás pasando por un mal momento.
+{5625}{5685}Estás enfadado,|estás dolido.
+{5685}{5747}¿Aceptarías un consejo?
+{5745}{5785}¡Búscate un romance!
+{5817}{5892}¡Vamos, eres soltero!|¡Libera tus hormonas!
+{5910}{5972}A mi nunca me ha gustado|estar soltero, ¿entiendes?
+{5970}{6032}¡Solo quiero volver a|casarme lo antes posible!
+{6150}{6212}¡Y yo solo quiero un|millón de dólares!
+{6330}{6360}¿Rachel?
+{6360}{6425}Oh gracias a Dios Mónica,|¡Por fin te encuentro!
+{6432}{6500}Pasé por tu casa|pero no estabas allá...
+{6500}{6571}Entonces un señor con un martillo enorme|dijo que podías estar aquí...
+{6572}{6635}-¿Quiere un poco de café?|-Descafeinado.
+{6675}{6762}Atención todo el mundo, esta es Rachel,|una antigua amiga del colegio.
+{6765}{6840}Aquí está todo el mundo,|este es Chandler, esta es Phoebe...
+{6840}{6902}ese es Joey y...|¿Te acuerdas de mi hermano Ross?
+{6900}{6935}¡Claro!
+{7155}{7255}¿Nos vas a decir ahora?|¿O esperamos por cuatro damas de honor?
+{7290}{7387}Está bien... todo empezó|media hora antes de la boda...
+{7427}{7490}Entré en la habitación|donde guardábamos los regalos...
+{7487}{7550}y me quedé mirando una salsera,|la mas bonita que jamás he visto...
+{7547}{7617}cuando de repente|me di cuenta que estaba...
+{7635}{7695}¿Descafeinado?
+{7692}{7740}Más interesada en ella...
+{7755}{7847}que en Barry.
+{7862}{7940}Entonces, en aquel momento, nerviosa|fue cuando descubrí...
+{7935}{8010}cuanto se parecía Barry|con el Sr. Cara de Papa.
+{8010}{8140}Ya saben, quiero decir,|siempre supe que me parecía familiar...
+{8147}{8235}de cualquier manera tenía que largarme|de allí, así que empezé a preguntarme:
+{8237}{8330}"¿Por qué estoy haciendo esto y|por quién lo estoy haciendo?"
+{8327}{8430}La verdad es que no sabía donde ir|y ya se que con el tiempo nos hemos ido distanciando...
+{8447}{8510}pero eres la única persona|que conozco en la ciudad...
+{8507}{8570}Y la única que no|invitaste a la boda.
+{8567}{8645}Esperaba que no te|lo tomaras tan a pecho...
+{9017}{9080}Está enfadada porque no le gusta...
+{9077}{9150}el órgano que le ha regalado|y ahora se lo está reprochando.
+{9167}{9200}"¿Ensalada de huevos o atún?"
+{9197}{9240}"¡Tú decides!"
+{9272}{9350}"Yo voy a comer cualquier cosa|que Christina esté comiendo."
+{9392}{9457}Papa entiéndelo...|no puedo casarme con el...
+{9485}{9525}lo siento...
+{9527}{9580}pero la verdad es|que no lo quiero.
+{9605}{9657}Bien...|¡Pero a mi sí me importa!
+{9737}{9820}"Si me suelto el cabello|mi cabeza va a caer"
+{9887}{9957}Ella nunca debería|haberse puesto esos pantalones.
+{9977}{10040}Sí tírala de las escaleras...
+{10037}{10120}Tírala... tírala...|¡Bien!
+{10205}{10257}Por favor papá...|¡Escúchame!
+{10277}{10370}Es como si toda mi vida todos|me hubiesen dicho: "Eres un Zapato"
+{10385}{10462}"¡Eres un zapato,|eres un zapato, eres un zapato!"
+{10457}{10537}Y hoy me pregunté por primera vez...|y si no quiero ser un zapato...
+{10535}{10592}¿Qué pasa si quiero ser un bolso?|¿Entiendes?
+{10625}{10665}¿O un sombrero?
+{10685}{10747}No, no quiero un sombrero,|digo que yo soy un sombrero...
+{10745}{10797}¡Es una metáfora papá!
+{10835}{10900}Es lógico que le cueste entenderlo.
+{10955}{11010}Papá... es mi vida.
+{11047}{11122}Pues puede que me quede|a vivir una temporada con Mónica.
+{11180}{11262}Está claro que va a|quedarse a vivir con Mónica.
+{11270}{11330}Esa decisión debo tomarla yo...
+{11360}{11407}tal vez no necesite tu dinero.
+{11407}{11460}¡Espera, espera,|dije tal vez!
+{11660}{11722}Respira, respira así.
+{11735}{11805}Trata de pensar en cosas|bonitas y tranquilas...
+{11810}{11882}La lluvia empapa al pobre gatito...
+{11900}{11985}su dueña le ha puesto|nosequé para taparlo...
+{12022}{12095}algo con nudos y cuerdas...
+{12112}{12180}Estoy mejor ahora.
+{12202}{12242}¡La ayudé!
+{12292}{12362}Mira Rachel es lo mejor|que podías hacer...
+{12367}{12437}Independízate...|toma el control de tu vida.
+{12442}{12485}Todo ese asunto|del "sombrero".
+{12482}{12565}Y oye, si necesitas algo|siempre puedes acudir a mi.
+{12585}{12725}Chandler y yo vivimos en el depto de enfrente...|pero él nunca está en casa.
+{12727}{12790}¡Joey, deja de coquetear con ella,|es el día de su boda!
+{12787}{12855}¿Qué pasa, existe alguna|ley que lo prohiba?
+{12922}{12960}¡Yo atiendo!
+{12982}{13067}Por favor no vuelvas a hacer eso,|es un ruido espantoso.
+{13072}{13112}Hola...soy Paul.
+{13115}{13182}Oh Dios, ¿son las 6:30?|¡Déjalo entrar!
+{13207}{13270}-¿Quién es Paul?|-¿Paul el tipo del vino, Paul?
+{13267}{13300}Tal vez.
+{13297}{13375}Un momento... ¿tu cita que no es una cita|es con Paul el tipo del vino?
+{13372}{13427}¿Por fin te invitó a salir?
+{13432}{13487}Ya tienes algo para|escribir en tu diario.
+{13507}{13555}Rachel, si quieres puedo anularla...
+{13552}{13615}¡No vete, ya estoy mucho mejor!
+{13612}{13685}¿Ross estás bien?|¿Quieres que me quede?
+{13717}{13762}Te lo agradecería...
+{13807}{13880}-¿En serio?|-No... lárgate. ¡Es Paul el tipo del vino!
+{13907}{13997}¿Qué quiso decir?|¿Él lo vende, lo bebe, se queja mucho?
+{14050}{14110}¡Hola, pasa!|Paul, estos son...
+{14122}{14197}todo el mundo,|todo el mundo, este es Paul.
+{14202}{14315}Dispulpa no entendí tu|nombre... ¿Paul verdad?
+{14365}{14440}Yo sólo, vengo enseguida,|solo tengo que ir a...
+{14435}{14480}¿Pensar en la vida?
+{14515}{14570}¡Cambiarme! Ok, siéntate.|Dos segundos.
+{14695}{14780}Acabo de arrancarme cuatro pestañas|esto no es una buena señal.
+{14887}{14950}¡Paul!|Un pequeño truco.
+{14950}{15027}A ella le gusta cuando refriegas|su cuello en el mismo lugar...
+{15025}{15120}varias veces hasta que comienza|a ponerse un poco rojo.
+{15145}{15190}¡Callate, Joey!
+{15235}{15297}Entonces Rachel,|¿qué vas a hacer esta noche?
+{15295}{15385}Bueno se supone que tendría que estar|volando rumbo a Aruba de luna de miel...
+{15400}{15442}¡Así que nada!
+{15475}{15550}Cierto, ni siquiera vas|a ir de luna de miel.
+{15565}{15652}Aunque Aruba en esta época|del año, esta lleno de...
+{15700}{15745}lagartos enormes.
+{15850}{15912}Quiero decir que si esta noche|no quieres estar sola...
+{15910}{15987}Joey y Chandler van a ayudarme|a montar mis nuevos muebles.
+{15985}{16050}Sí estamos realmente emocionados.
+{16075}{16150}Bueno, gracias, pero creo que me|quedaré en casa, esta noche. Ha sido...
+{16152}{16210}-un día muy largo.|-¡Está bien, claro!
+{16207}{16242}Phoebe... ¿quieres ayudarnos?
+{16240}{16305}Oh, me encantaría...|pero no quiero.
+{16583}{16643}El amor es un trabajo|de arte maravilloso...
+{16642}{16702}el amor es dulce como lluvia de verano...
+{16717}{16787}Pero tu amor, oh,|tu amor, tu amor...
+{16869}{16919}Es como un ave gigante...
+{16974}{17024}picando en mi corazón.
+{17124}{17162}¡Gracias!
+{17378}{17476}Debemos sujetar una especie de escuadra|a la estructura lateral utilizando...
+{17483}{17558}las herramientas con forma de gusano...
+{17573}{17668}No veo ninguna escuadra ni|herramientas con forma de gusano y...
+{17693}{17753}no se si podre levantarme.
+{17845}{17890}Creo que tenemos|un estante aquí.
+{17887}{17942}Es una cosa linda.
+{17947}{17990}¿Qué es esto?
+{17992}{18072}Yo tendría que decir que es una|pieza en forma de L.
+{18112}{18180}-¿Que era para ir dónde?|-No tengo idea.
+{18265}{18335}-¡El estante está listo!|-¡Completamente terminado!
+{18412}{18475}Esta era la cerveza favorita de Carol.
+{18516}{18604}Ella siempre bebía directo de la lata,|debí haberme dado cuenta.
+{18684}{18746}Si vas a comenzar con eso|nos vamos ahora.
+{18744}{18806}Por favor, no acabes|con toda esta diversión.
+{18816}{18864}Déjame que te haga una pregunta.
+{18864}{18941}A ella le tocaron los muebles, el equipo|de música, la tele que funciona.
+{18969}{19014}¿Qué te queda a ti?
+{19014}{19044}Ustedes.
+{19044}{19106}-Te han fastidiado.|-¡Oh, Dios!
+{19103}{19178}Lo se, lo se,|soy un completo idiota.
+{19208}{19318}Debería habérmelo imaginado cuando ella empezó|a ir al dentista cuatro o cinco veces por semana.
+{19328}{19390}Quiero decir, ¿cuán limpio|puede quedar un diente?
+{19388}{19450}Mi hermano esta pasando|por algo así, está destrozado.
+{19448}{19495}¿Cómo lo superaste tú?
+{19493}{19585}Dile que intente romper algo que sea|muy valioso para ella, por ejemplo...
+{19583}{19615}¿Una pierna?
+{19613}{19725}Es una posibilidad.|Yo quebré su reloj.
+{19744}{19774}¿Tú le rompiste el reloj?
+{19779}{19835}La peor cosa que yo hice fue robar...
+{19837}{19924}la toalla favorita de mi novio.
+{19927}{19992}-¡Tendré ciudado contigo!|-¡Así es!
+{20004}{20067}Barry, lo siento,|lo siento mucho...
+{20077}{20210}creerás que tiene que ver con lo que te dije|sobre hacer el amor con los calcetines puestos...
+{20212}{20269}pero no es así, esta vez|se trata de mi, cuando...
+{20436}{20506}Hola, la contestadora se corto de nuevo,|de cualquier forma....
+{20631}{20750}Mira, mira, yo creo que alguna chica va a ser muy|afortunada de convertirse en la señora Barry Finkel.
+{20751}{20811}Pero no soy yo,|no soy yo.
+{20843}{20951}No tengo idea de quién soy en este momento|sólo dame una oportunidad de...
+{21007}{21050}¡Estoy divorciado!
+{21052}{21112}¡Tengo 26 años y ya estoy divorciado!
+{21112}{21147}-¡Cállate!|-¡Debes parar!
+{21307}{21362}Sólo llevo una hora montando esto.
+{21395}{21495}Mira Ross, tienes que entender, ninguno de nosotros|tuvo una relación que durara más que una menta.
+{21574}{21664}¡Uds. no tuvieron el amor de|una mujer por cuatro años!
+{21666}{21734}Cuatro años de romance e intimidad...
+{21754}{21801}para que al final ella les|destruya el corazón...
+{21801}{21866}y por qué no nos hacen eso!
+{21891}{21951}¡Creo que no era eso|lo que quería decir!
+{21981}{22084}Saben que es lo que más me asusta. Qué pasa|si en este mundo solo hay una mujer para cada uno.
+{22086}{22166}¡Qué pasa si solo te toca|una mujer y se acabó!
+{22163}{22253}Desgraciadamente en mi caso|sólo habia una mujer, para ella.
+{22325}{22395}¿De qué estás hablando?|¿Una mujer?
+{22430}{22525}Eso es como decir que solo|hay un sabor de helado.
+{22523}{22615}Deja que te explique algo Ross.|Ahí fuera hay muchos sabores distintos.
+{22610}{22695}Hay ron con pasas, chocolate con|almendras y vainilla y fresa.
+{22730}{22828}Puedes pedirlo con chocolate caliente|o con nueces o con crema chantilly.
+{22849}{22912}¡Es lo mejor que te|podría haber pasado!
+{22909}{22987}¿Se te ocurrió casarte cuando|tenías cuantos... ocho años?
+{23032}{23102}¡Bienvenido de vuelta al mundo!|¡Toma un cucurucho!
+{23137}{23199}La verdad es que no se si|estoy caliente o hambriento.
+{23197}{23254}¡Aléjate de mi nevera!
+{23332}{23404}Desde que ella me abandonó, yo...
+{23421}{23461}¿Qué?|¿Qué pasa?
+{23481}{23543}¿Vas a deletrearlo|con los fideos?
+{23541}{23616}No...es que es algo que debería|contarte en la próxima cita.
+{23661}{23726}¿Así que va a haber|una quinta cita?
+{23766}{23806}¿Crees que la habrá?
+{23811}{23868}Sí, sí, creo que sí.
+{23886}{23941}¿Qué ibas a decirme?
+{24065}{24122}Bueno, verás... desde que|ella me abandonó...
+{24140}{24212}yo no he conseguido|volver a funcionar...
+{24230}{24272}sexualmente.
+{24337}{24367}Oh, Dios,|oh Dios...
+{24365}{24407}lo siento...|lo siento muchísimo.
+{24410}{24520}Se que lo que menos necesitas|ahora es que te escupan.
+{24545}{24582}¿Cuanto hace?
+{24589}{24626}Dos años.
+{24664}{24724}¡Vaya! ¡Me alegro de que|le rompieras el reloj!
+{24784}{24906}¿Sigues creyendo que|habrá una quinta cita?
+{24979}{25021}Sí claro que sí.
+{25056}{25119}Estamos reunidos|aquí para unir a...
+{25116}{25179}Joanie Louise Cunningham...
+{25176}{25251}y Charles Chachi,|Chachi, Chachi...
+{25308}{25375}en sagrado matrimonio.
+{25383}{25450}-Los declaro marido y mujer...|-¡Ves!
+{25460}{25540}¡Pero Joanne ama a Chachi!|¡Esa es la diferencia!
+{25608}{25655}¿Que coja un cucurucho?
+{25668}{25748}¿Sabes cuanto hace que|no cojo un cucurucho?
+{25745}{25840}Las palabras "No te hagas el héroe"|¿Significan algo para ti?
+{25937}{25994}¡Gran historia!|Pero, me tengo que ir.
+{26017}{26062}Tengo una cita con...
+{26059}{26112}Angela. Andrea.|¡Oh, Dios!.
+{26147}{26219}Andrea es la que grita,|Angela tiene gatos.
+{26224}{26299}Cierto, gracias.|Es June. Me voy.
+{26377}{26489}Te diré cuál es el problema, aunque yo|consiguiera armarme del suficiente valor...
+{26493}{26551}para pedirle una cita a una mujer...
+{26556}{26611}¿A quién se la iba a pedir?
+{27160}{27190}¿No es increíble?
+{27190}{27265}Es la primera vez que preparo|café en toda mi vida.
+{27265}{27330}-Sí, es increíble.|-Felicitaciones.
+{27328}{27423}Saben, llegué a la conclusión de que si pude hacer café,|no hay nada que no pueda hacer.
+{27430}{27540}Creo que es la frase: "Si yo invado|Polonia, no hay nada que no pueda hacer"
+{27550}{27653}Felicidades, y ya que estas tan inspirada|podrías preparar una tortillita o algo...
+{27747}{27824}aunque la verdad es que no|tengo mucho apetito esta mañana...
+{27849}{27919}Oh, mi Dios,|Hugo y Paco estan aquí.
+{27939}{28002}-Buenos días.|-Buenos días.
+{28047}{28094}-¡Buenos días!|-Buenos días, Paul.
+{28093}{28155}-Hola, Paul.|-Hola Paul, ¿verdad?
+{28332}{28362}Gracias.
+{28359}{28407}-¡Gracias! ¡Muchas Gracias!|-¡Para!
+{28407}{28459}No te estoy diciendo,|anoche fue como...
+{28467}{28574}todos mis aniversarios, las dos graduaciones,|más la escena del granero de Witness.
+{28719}{28767}Hablaremos luego.
+{28886}{28926}Gracias.
+{29097}{29149}No fue una cita de verdad...
+{29172}{29242}¿Que diablos haces en|las citas de verdad?
+{29277}{29337}Callate y coloca la mesa en su lugar.
+{29369}{29414}Bueno chicos|es hora de irse a trabajar.
+{29412}{29514}Hay que ingresar dinero en la cuenta.|Aunque veo que no les importa.
+{29621}{29683}Entonces...|¿Todos ustedes tienen empleo?
+{29711}{29758}Si, todos tenemos empleo.
+{29756}{29808}Es así como...|compramos cosas.
+{29877}{29924}Sí, yo soy un actor.
+{29922}{29979}¿Te he visto en alguna parte?
+{29979}{30044}Lo dudo,|suelo actuar en provincias.
+{30042}{30137}¡Espera! a no ser que hayas|visto el reestreno de Pinocho...
+{30133}{30201}en el pequeño teatro del parque.
+{30208}{30253}Hey, era un trabajo, ¿ok?
+{30251}{30323}"Mira Gepetto soy|un niño de carne y hueso"
+{30373}{30428}No me voy a quedar aguantando eso.
+{30433}{30478}Tienes razón, disculpa...
+{30476}{30551}"Antes era un muñeco de madera,|de madera, de madera..."
+{30596}{30671}Deberían saber que él|es hombre muerto.
+{30703}{30746}¡Oh, Chandler!
+{30808}{30871}¿Como te encuentras hoy?|¿Has dormido bien?
+{30868}{30943}¿Has hablado con Barry?|No puedo dejar de sonreir.
+{30973}{31068}Ya lo veo... parece que hayas|dormido con un percha en la boca.
+{31183}{31233}Lo se, lo se|pero es que es tan...
+{31258}{31318}¿Te acuerdas de lo tuyo|con Tony de Marco?
+{31348}{31416}Pues es algo parecido|pero con sentimientos.
+{31467}{31530}-¡Oh vaya!|-Estás en problemas.
+{31545}{31610}¿Quieres un vestido de novia?|Parece nuevo.
+{31617}{31697}No nos vamos a precipitar.
+{31708}{31808}Ok, voy a levantarme de la mesa, iré a|trabajar y no pensaré en él en todo el dia.
+{31846}{31923}O simplemente me levantaré|e ire a trabajar.
+{31918}{31966}-¡Oh, deséame suerte!|-¿Para qué?
+{31965}{32037}Voy a ir a conseguir|uno de esos... empleos.
+{32310}{32382}-¡Hola, Mónica!|-¡Hola, Frannie, bienvenida de vuelta!
+{32385}{32415}¿Cómo te fue en Florida?
+{32412}{32467}Tuviste sexo, ¿verdad?
+{32505}{32537}¿Como supiste?
+{32535}{32612}¡Oh te detesto! ¡Yo empujando a mi|tía Roz en el bosque de loros...
+{32610}{32657}y tú teniendo sexo!
+{32655}{32690}Y bien,|¿con quién?
+{32745}{32787}¿Conoces a Paul?
+{32790}{32837}¿Paul, el tipo del vino?
+{32835}{32882}Oh, si,|yo conozco a Paul.
+{32925}{32997}¿Conoces a Paul como|yo conozco a Paul?
+{33000}{33062}¿Bromeas? Yo me atribuyo|todo el mérito.
+{33060}{33147}Antes de conocerme a mi, su tortuguita|no había salido del caparazón en dos años.
+{33239}{33291}¡Pero claro que fue mentira!
+{33299}{33376}¿Por qué? ¿Por qué? ¿Por qué?|¿Por qué alguien haría eso?
+{33374}{33451}Supongo que buscas una respuesta|mas sofisticada que...
+{33449}{33511}"Para llevarte a la cama"
+{33525}{33577}¡Odio a los hombres!|¡Odio a los hombres!
+{33585}{33665}Oh, no, no los odies. No vas a|querer colocar eso en el universo.
+{33690}{33727}¿Seré yo?
+{33735}{33822}¿Acaso emito una especie de señal|que sólo pueden oir los perros...
+{33824}{33901}y los hombres con graves|problemas emocionales?
+{33899}{33956}Está bien, ven aquí,|acercame tus pies.
+{34126}{34194}Y a mi me pareció muy|simpatico, ¿saben?
+{34274}{34351}¡No puedo creer que no|supieras que era mentira!
+{34454}{34471}Adivinen.
+{34471}{34534}-¿Conseguiste un empleo?|-¿Estás bromeando?
+{34531}{34586}No estoy preparada para nada...
+{34619}{34666}Hoy se han reido de mi|en doce entrevistas.
+{34666}{34714}A pesar de eso estás muy animada.
+{34711}{34804}Bueno tú también lo estarías si hubieses|encontrado unas botas de piel...
+{34799}{34846}¡A mitad de precio!
+{34846}{34896}Oh, que bien me conoces...
+{34951}{35014}Estas son mis nuevas botas: "¡No necesito|un empleo ni necesito a mis padres...
+{35011}{35071}porque tengo unas botas preciosas!"
+{35100}{35163}-¿Cómo las pagaste?|-Tarjeta de crédito.
+{35160}{35210}¿Y quién paga por eso?
+{35220}{35258}¡Mi papá!
+{35356}{35404}Oh, vamos chicos,|¿es exactamente necesario?
+{35401}{35464}Yo puedo parar de comprar|cuando yo quiera.
+{35461}{35506}Vamos no puedes seguir viviendo|a costa de tus padres toda tu vida.
+{35506}{35586}Ya lo se, precisamente|por eso iba a casarme.
+{35611}{35706}Dale un respiro, es difícil|ser independiente por primera vez.
+{35700}{35745}-Gracias.|-¡De nada!
+{35745}{35818}De nada. Recuerdo que cuando llegué|a esta ciudad tenía catorce años.
+{35820}{35898}Mi madre acababa de suicidarse y|mi padrastro estaba en la carcel.
+{35895}{35943}No conocía absolutamente a nadie...
+{35940}{36040}y acabé viviendo con un tipo albino que limpiaba|parabrisas enfrente de la estación de trenes...
+{36060}{36108}hasta que se suicidó... entonces...
+{36108}{36208}descubrí la aromaterapia. Así que créeme|se exactamente cómo te sientes.
+{36303}{36365}La expresión que estas buscando es...
+{36375}{36423}"De cualquier forma..."
+{36528}{36565}Bueno...¿preparada?
+{36570}{36633}No, no, ¡no estoy preparada!|¿Cómo puedo estar preparada?
+{36630}{36693}"Hey, Rach, ¿está preparada para saltar|del avión sin paracaidas?"
+{36690}{36723}¡Pero, yo no puedo hacer eso!
+{36723}{36785}-¡Tú puedes! Yo se que tú puedes.|-Yo creo que no...
+{36783}{36850}¡Vamos, puedes hacer café!|¡Puedes hacer cualquier cosa!
+{36914}{36957}Vamos, corta, corta, corta...
+{37083}{37125}¿Saben qué?
+{37128}{37213}Creo que podríamos dejarlo así,|como un tipo de gesto simbólico...
+{37233}{37288}¡Rachel! ¡Esa era una|tarjeta de biblioteca!
+{37428}{37530}¿Saben qué? Si prestan la suficiente atención|podrán oir los miles de gritos.
+{37622}{37669}¡Bienvenida al mundo real!
+{37667}{37729}¡Es una mierda!|¡Pero te gustará!
+{37937}{37974}Bien, se acabó.
+{37998}{38030}¿Vas a dormir en el sofá?
+{38030}{38115}-No, no, tengo que ir a casa alguna vez.|-¿Vas a estar bien?
+{38164}{38229}Mon, mira lo que encontré en el piso.
+{38252}{38287}¿Qué es?
+{38297}{38344}Es el reloj de Paul.
+{38344}{38419}Puedes dejarlo dónde lo encontraste.
+{38432}{38479}Oh, gente.|Está bien.
+{38492}{38559}-Buenas noches a todos.|-Buenas noches.
+{38823}{38853}-Oh disculpa.|-No, no, no, sácala.
+{38852}{38914}-No, realmente, no quiero...|-¿Mitad y mitad?
+{39034}{39132}Probablemente no sabes,|pero en el colegio yo...
+{39137}{39194}estaba bastante loco por ti.
+{39229}{39259}Lo sabía.
+{39257}{39294}¡Lo sabías!
+{39334}{39399}Yo siempre creí que tu me veías|como el idiota hermano de Mónica.
+{39423}{39458}Así es.
+{39588}{39636}Oye, crees que...
+{39633}{39733}no permitas que mi intensa|vulnerabilidad influya en tu respuesta.
+{39769}{39867}¿Crees que alguna vez podría|invitarte a cenar por ahí?
+{39949}{39984}Tal vez.
+{40158}{40206}Ok, tal vez lo haga...
+{40308}{40363}-¡Buenas noches!|-¡Buenas noches!
+{40698}{40733}Nos vemos.
+{40788}{40821}Espera.
+{40818}{40863}¿Qué te pasa?
+{40908}{40961}¡Acabo de tomar un cucurucho!
+{41178}{41226}No puedo creer lo que estoy oyendo.
+{41225}{41272}No puedo creer lo que estoy oyendo.
+{41270}{41347}-¿Qué? Sólo dije que tenías...|-¿Qué? Sólo dije que tenías...
+{41345}{41390}¿Quieres parar?
+{41390}{41440}¿Lo estaba haciendo otra vez?
+{41480}{41572}Sólo dije que tenías un bonito trasero,|no es como un maravilloso trasero.
+{41586}{41661}Tú no reconocerías un trasero maravilloso,|ni aunque viniera aquí y te mordiera.
+{41661}{41708}¿Tienes una foto?
+{41751}{41811}¿Alguien quiere más café?
+{41855}{41897}¿Lo hiciste tú o sólo lo sirves?
+{41915}{41995}-Sólo lo sirvo.|-Ah, entonces yo quiero.
+{42005}{42037}Chicos, otro sueño...
+{42035}{42065}Estoy en las Vegas...
+{42065}{42112}¿Señorita?|Más café.
+{42142}{42227}Disculpe, ¿podría llevar esto|a aquel señor de allá?
+{42227}{42262}Vaya.
+{42275}{42287}¡Gracias!
+{42300}{42370}Disculpen...|Ok. Las Vegas...
+{42372}{42442}Estoy en Las Vegas...
+{42446}{42496}y soy Liza Minelli...

@@ -11,6 +11,6 @@ end
 
 File.open(file_name_of_translation, 'w') do |file_handle|
   file_handle.write(
-    IO.read(file_name_of_text).downcase.gsub(/\.|\,|\:|\!|\?|¿|\—|\-|»|«|\(|\)|¡|\;/, ' ').split(/\s+/).uniq.map {|elem| "#{elem} ::: "}.join("\n")
+    IO.read(file_name_of_text).downcase.gsub(/\.|\,|\:|\!|\?|¿|\—|\-|»|«|\(|\)|¡|\;|\"|\{|\}|\d+|\|/, ' ').split(/\s+/).select{|word| word.size > 0}.uniq.map {|elem| "#{elem} ::: "}.join("\n")
   )
 end

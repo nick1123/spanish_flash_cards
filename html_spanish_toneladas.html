@@ -35,6 +35,7 @@
       function setup(initialPhraseIndexArray)
       {
         phraseIndexArray = initialPhraseIndexArray
+        phraseIndexArray = shuffle(phraseIndexArray);
         allDone = false;
         nextWord();
       }
