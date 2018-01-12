@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Spanish Practice</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/jumbotron-narrow.css" rel="stylesheet">
+
+    <script>
+
+      function shuffle(arr) {
+        var i,
+            j,
+            temp;
+        for (i = arr.length - 1; i > 0; i--) {
+          j = Math.floor(Math.random() * (i + 1));
+          temp = arr[i];
+          arr[i] = arr[j];
+          arr[j] = temp;
+        }
+        return arr;    
+      };
+
+      function setup(initialPhraseIndexArray)
+      {
+        phraseIndexArray = initialPhraseIndexArray
+        phraseIndexArray = shuffle(phraseIndexArray);
+        allDone = false;
+        nextWord();
+      }
+
+      function nextWord()
+      {
+        updateWordsLeft();
+
+        if (phraseIndexArray.length == 0) {
+          document.getElementById("mainTextDisplay").textContent = "All Done!";
+          document.getElementById('definitionButton').style.display = 'none';
+          document.getElementById('wordButtons').style.display = 'none';
+        } else {
+          currentPhraseIndex = phraseIndexArray.pop();
+          currentSpanishWord = masterListOfPhrases[currentPhraseIndex]["spanish"];
+          document.getElementById("mainTextDisplay").textContent = currentSpanishWord;
+          document.getElementById('definitionButton').style.display = 'none';
+          document.getElementById('wordButtons').style.display = 'block';
+        }
+      }
+
+      function updateWordsLeft()
+      {
+        document.getElementById('wordsLeftSpan').style.display = 'block';
+        document.getElementById("wordsLeft").textContent = phraseIndexArray.length;
+      }
+
+      function wordSuccess()
+      {
+        nextWord();
+      }
+
+      function wordFailure()
+      {
+        document.getElementById('definitionButton').style.display = 'block';
+        document.getElementById('wordButtons').style.display = 'none';
+        document.getElementById("mainTextDisplay").textContent = currentSpanishWord + " => " + masterListOfPhrases[currentPhraseIndex]["english"];
+
+        phraseIndexArray.push(currentPhraseIndex);
+        phraseIndexArray.push(currentPhraseIndex);
+        phraseIndexArray.push(currentPhraseIndex);
+
+        phraseIndexArray = shuffle(phraseIndexArray);
+        
+        updateWordsLeft();
+      }
+
+
+      var phraseIndexArray;
+      var currentPhraseIndex;
+      var allDone;
+
+      var masterListOfPhrases = {
+        "1" : { "spanish" : "Imperfect AR Verbs", "english" : "aba abas aba ábamos abais aban" },
+        "2" : { "spanish" : "Imperfect ER/IR Verbs", "english" : "ía ías ía íamos íais ían" },
+        "3" : { "spanish" : "ir - Imperfect", "english" : "iba ibas iba íbamos ibais iban" },
+        "4" : { "spanish" : "ser - Imperfect", "english" : "era eras era éramos erais eran" },
+        "5" : { "spanish" : "ver - Imperfect", "english" : "veía veías veía veíamos veíais veían" },
+        "6" : { "spanish" : "Preterite AR Verbs", "english" : "é aste ó amos asteis aron" },
+        "7" : { "spanish" : "Preterite ER/IR Verbs", "english" : "í iste ió imos isteis ieron" },
+        "8" : { "spanish" : "ser - Preterite", "english" : "fui fuiste fue fuimos fuisteis fueron" },
+        "9" : { "spanish" : "ir - Preterite", "english" : "fui fuiste fue fuimos fuisteis fueron" },
+        "10" : { "spanish" : "dar - Preterite", "english" : "di diste dio dimos disteis dieron" },
+        "11" : { "spanish" : "ver - Preterite", "english" : "vi viste vio vimos visteis vieron" },
+        "12" : { "spanish" : "Conditional AR/ER/IR Verbs", "english" : "infinitive + ía ías ía íamos íais ían" },
+        "13" : { "spanish" : "tener - Conditional", "english" : "tendría tendrías tendría tendríamos tendríais tendrían" },
+        "14" : { "spanish" : "poner - Conditional", "english" : "pondría pondrías pondría pondríamos pondríais pondrían" },
+        "15" : { "spanish" : "valer - Conditional", "english" : "valdría valdrías valdría valdríamos valdríais valdrían" },
+        "16" : { "spanish" : "salir - Conditional", "english" : "saldría saldrías saldría saldríamos saldríais saldrían" },
+        "17" : { "spanish" : "venir - Conditional", "english" : "vendría vendrías vendría vendríamos vendríais vendrían" },
+        "18" : { "spanish" : "poder - Conditional", "english" : "podría podrías podría podríamos podríais podrían" },
+        "19" : { "spanish" : "caber - Conditional", "english" : "cabría cabrías cabría cabríamos cabríais cabrían" },
+        "20" : { "spanish" : "haber - Conditional", "english" : "habría habrías habría habríamos habríais habrían" },
+        "21" : { "spanish" : "querer - Conditional", "english" : "querría querrías querría querríamos querríais querrían" },
+        "22" : { "spanish" : "saber - Conditional", "english" : "sabría sabrías sabría sabríamos sabríais sabrían" },
+        "23" : { "spanish" : "dar - Conditional", "english" : "diría dirías diría diríamos diríais dirían" },
+        "24" : { "spanish" : "hacer - Conditional", "english" : "haría harías haría haríamos haríais harían" },
+        "25" : { "spanish" : "Future AR/ER/IR Verbs", "english" : "infinitive + é ás á emos éis án" },
+        "26" : { "spanish" : "tener - Future", "english" : "tendré tendrás tendrá tendremos tendréis tendrán" },
+        "27" : { "spanish" : "poner - Future", "english" : "pondré pondrás pondrá pondremos pondréis pondrán" },
+        "28" : { "spanish" : "valer - Future", "english" : "valdré valdrás valdrá valdremos valdréis valdrán" },
+        "29" : { "spanish" : "salir - Future", "english" : "saldré saldrás saldrá saldremos saldréis saldrán" },
+        "30" : { "spanish" : "venir - Future", "english" : "vendré vendrás vendrá vendremos vendréis vendrán" },
+        "31" : { "spanish" : "poder - Future", "english" : "podré podrás podrá podremos podréis podrán" },
+        "32" : { "spanish" : "caber - Future", "english" : "cabré cabrás cabrá cabremos cabréis cabrán" },
+        "33" : { "spanish" : "haber - Future", "english" : "habré habrás habrá habremos habréis habrán" },
+        "34" : { "spanish" : "querer - Future", "english" : "querré querrás querrá querremos querréis querrán" },
+        "35" : { "spanish" : "saber - Future", "english" : "sabré sabrás sabrá sabremos sabréis sabrán" },
+        "36" : { "spanish" : "dar - Future", "english" : "diré dirás dirá diremos diréis dirán" },
+        "37" : { "spanish" : "hacer - Future", "english" : "haré harás hará haremos haréis harán" },
+      };
+
+    </script>
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="header clearfix">
+        <h3 class="text-muted">Spanish Practice</h3>
+      </div>
+
+        <span id="mainTextDisplay" class="h3">Pick a Phrase</span>
+        <p></p>
+        <p></p>
+        <p>
+          <span id="wordButtons" style="display: none;">
+            <a class="btn btn-success" id="got_it" role="button" onclick="wordSuccess()">Got it!</a>
+            &nbsp;&nbsp;&nbsp;
+            <a class="btn btn-danger" id="not_yet" role="button" onclick="wordFailure()">Not Yet</a>
+          </span>
+          <span id="definitionButton" style="display: none;">
+            <a class="btn btn-info" role="button" onclick="nextWord()">Next</a>
+          </span>
+        </p>
+        <div id="wordsLeftSpan" style="display: none;">Words Left: <span id="wordsLeft"></span></div>
+      
+
+      <div class="row marketing">
+        <div class="col-lg-12">
+          <h4>Phrases</h4>
+          <p>
+
+            <button type="button" class="btn btn-info" onclick="setup( ['1'] );">Imperfect AR Verbs</button>
+            <button type="button" class="btn btn-info" onclick="setup( ['2'] );">Imperfect ER/IR Verbs</button>
+            <button type="button" class="btn btn-info" onclick="setup( ['3'] );">ir - Imperfect</button>
+            <button type="button" class="btn btn-info" onclick="setup( ['4'] );">ser - Imperfect</button>
+            <button type="button" class="btn btn-info" onclick="setup( ['5'] );">ver - Imperfect</button>
+            <br>
+            <button type="button" class="btn btn-info" onclick="setup( ['6'] );">Preterite AR Verbs</button>
+            <button type="button" class="btn btn-info" onclick="setup( ['7'] );">Preterite ER/IR Verbs</button>
+            <button type="button" class="btn btn-info" onclick="setup( ['8'] );">ser - Preterite</button>
+            <button type="button" class="btn btn-info" onclick="setup( ['9'] );">ir - Preterite</button>
+            <button type="button" class="btn btn-info" onclick="setup( ['10'] );">dar - Preterite</button>
+            <br>
+            <button type="button" class="btn btn-info" onclick="setup( ['11'] );">ver - Preterite</button>
+            <button type="button" class="btn btn-info" onclick="setup( ['12'] );">Conditional AR/ER/IR Verbs</button>
+            <button type="button" class="btn btn-info" onclick="setup( ['13'] );">tener - Conditional</button>
+            <button type="button" class="btn btn-info" onclick="setup( ['14'] );">poner - Conditional</button>
+            <button type="button" class="btn btn-info" onclick="setup( ['15'] );">valer - Conditional</button>
+            <br>
+            <button type="button" class="btn btn-info" onclick="setup( ['16'] );">salir - Conditional</button>
+            <button type="button" class="btn btn-info" onclick="setup( ['17'] );">venir - Conditional</button>
+            <button type="button" class="btn btn-info" onclick="setup( ['18'] );">poder - Conditional</button>
+            <button type="button" class="btn btn-info" onclick="setup( ['19'] );">caber - Conditional</button>
+            <button type="button" class="btn btn-info" onclick="setup( ['20'] );">haber - Conditional</button>
+            <br>
+            <button type="button" class="btn btn-info" onclick="setup( ['21'] );">querer - Conditional</button>
+            <button type="button" class="btn btn-info" onclick="setup( ['22'] );">saber - Conditional</button>
+            <button type="button" class="btn btn-info" onclick="setup( ['23'] );">dar - Conditional</button>
+            <button type="button" class="btn btn-info" onclick="setup( ['24'] );">hacer - Conditional</button>
+            <button type="button" class="btn btn-info" onclick="setup( ['25'] );">Future AR/ER/IR Verbs</button>
+            <br>
+            <button type="button" class="btn btn-info" onclick="setup( ['26'] );">tener - Future</button>
+            <button type="button" class="btn btn-info" onclick="setup( ['27'] );">poner - Future</button>
+            <button type="button" class="btn btn-info" onclick="setup( ['28'] );">valer - Future</button>
+            <button type="button" class="btn btn-info" onclick="setup( ['29'] );">salir - Future</button>
+            <button type="button" class="btn btn-info" onclick="setup( ['30'] );">venir - Future</button>
+            <br>
+            <button type="button" class="btn btn-info" onclick="setup( ['31'] );">poder - Future</button>
+            <button type="button" class="btn btn-info" onclick="setup( ['32'] );">caber - Future</button>
+            <button type="button" class="btn btn-info" onclick="setup( ['33'] );">haber - Future</button>
+            <button type="button" class="btn btn-info" onclick="setup( ['34'] );">querer - Future</button>
+            <button type="button" class="btn btn-info" onclick="setup( ['35'] );">saber - Future</button>
+            <br>
+            <button type="button" class="btn btn-info" onclick="setup( ['36'] );">dar - Future</button>
+            <button type="button" class="btn btn-info" onclick="setup( [] );"></button>
+
+          </p>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <p>&copy; Umm No copyright :) </p>
+      </footer>
+    </div> <!-- /container -->
+  </body>
+</html>

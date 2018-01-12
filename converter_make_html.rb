@@ -6,8 +6,8 @@
 #################################
 ## Build the javascript
 
-def convert_phrases_to_js
-  @convert_phrases_to_js ||= IO.readlines(ARGV[0]).map.each_with_index do |line, index|
+def words_and_translations
+  @words_and_translations ||= IO.readlines(ARGV[0]).map.each_with_index do |line, index|
     arr = line.strip.split(':::').map do |elem|
       elem.strip
     end
@@ -15,26 +15,49 @@ def convert_phrases_to_js
     spanish_value = arr[0].gsub('"', '\"')
     english_value = arr[1].gsub('"', '\"')
 
-    #        "1" : { "spanish": "cosas", "english" : "things" },
-    "        \"#{index + 1}\" : { \"spanish\" : \"#{spanish_value}\", \"english\" : \"#{english_value}\" },"
-  end
+    [index + 1, {english_value: english_value, spanish_value: spanish_value}]
+
+  end.to_h
 end
 
-phrases_count = convert_phrases_to_js.size
+def convert_to_js(translations)
+  "      var masterListOfPhrases = {\n" + IO.readlines(ARGV[0]).map.each_with_index do |line, index|
+    arr = line.strip.split(':::').map do |elem|
+      elem.strip
+    end
 
-phrases_js_text = "      var masterListOfPhrases = {\n" + convert_phrases_to_js.join("\n") + "\n      };"
+    spanish_value = arr[0].gsub('"', '\"')
+    english_value = arr[1].gsub('"', '\"')
+
+    js_index = index + 1
+
+    #        "1" : { "spanish": "cosas", "english" : "things" },
+    "        \"#{js_index}\" : { \"spanish\" : \"#{spanish_value}\", \"english\" : \"#{english_value}\" },"
+  end.join("\n") + "\n      };"
+end
+
+
+
+phrases_count = words_and_translations.keys.size
+
+phrases_js_text = convert_to_js(words_and_translations)
 
 
 
 #################################
 ## Build the html buttons
 
-GROUP_SIZE_SMALL = 5
-GROUP_SIZE_BIG   = 25
+def group_size_small
+  (ARGV[1] || 5).to_i
+end
+
+GROUP_SIZE_SMALL = group_size_small
+GROUP_SIZE_BIG   = GROUP_SIZE_SMALL * 5
 
 # <button type="button" class="btn btn-primary" onclick="setup( ['1', '2', '3', '4', '5'] );">1 - 5</button>
-def button_for_phrase_group(index, last_index, group_size, button_type)
+def button_for_phrase_group(index, translations, group_size, button_type)
 
+  last_index = translations.keys.sort[-1]
   if index != last_index && index % group_size != 0
     return ''
   end
@@ -42,6 +65,7 @@ def button_for_phrase_group(index, last_index, group_size, button_type)
   min_value = index - group_size + 1
   max_value = [index, last_index].min
 
+  # Edge case:  End of the list
   if index == last_index
     min_value = index - (index % group_size) + 1
     if group_size == last_index
@@ -49,8 +73,35 @@ def button_for_phrase_group(index, last_index, group_size, button_type)
     end
   end
 
-  setup_values = (min_value..max_value).map {|i| "'#{i}'"}.join(', ')
-  "<button type=\"button\" class=\"btn btn-#{button_type}\" onclick=\"setup( [#{setup_values}] );\">#{min_value} - #{max_value}</button>"
+  setup_values = (min_value..max_value).map {|index| "'#{index}'"}.join(', ')
+  display_values = (min_value..max_value).map {|index| translations[index][:spanish_value]}.join(', ')
+
+  if index == last_index && group_size == last_index
+    display_values = "Review All"
+  end
+  "<button type=\"button\" class=\"btn btn-#{button_type}\" onclick=\"setup( [#{setup_values}] );\">#{display_values}</button>"
+end
+
+
+def button_for_small_group(index, translations, group_size)
+
+  last_index = translations.keys.sort[-1]
+  if index != last_index && index % group_size != 0
+    return ''
+  end
+
+  min_value = index - group_size + 1
+  max_value = [index, last_index].min
+
+  # Edge case:  End of the list
+  if index == last_index
+    min_value = index - (index % group_size) + 1
+  end
+
+  setup_values   = (min_value..max_value).map {|index| "'#{index}'"}.join(', ')
+  display_values = (min_value..max_value).map {|index| index.to_s + ": " + translations[index][:spanish_value]}.join(', ')
+
+  "<button type=\"button\" class=\"btn btn-info\" onclick=\"setup( [#{setup_values}] );\">#{display_values}</button>"
 end
 
 
@@ -60,9 +111,10 @@ end
 
 buttons = (1..phrases_count).map do |index|
   [
-    button_for_phrase_group(index, phrases_count, GROUP_SIZE_SMALL, 'info'),
-    button_for_phrase_group(index, phrases_count, GROUP_SIZE_BIG,   'primary'),
-    button_for_phrase_group(index, phrases_count, phrases_count,    'success'),
+    button_for_small_group(index, words_and_translations, GROUP_SIZE_SMALL),
+    # button_for_phrase_group(index, words_and_translations, GROUP_SIZE_SMALL, 'info'),
+    # button_for_phrase_group(index, words_and_translations, GROUP_SIZE_BIG,   'primary'),
+    # button_for_phrase_group(index, words_and_translations, phrases_count,    'success'),
     br_tag(index, GROUP_SIZE_BIG)
   ]
 end.flatten.reject {|elem| elem.empty? }.map {|elem| "            #{elem}"}.join("\n")
