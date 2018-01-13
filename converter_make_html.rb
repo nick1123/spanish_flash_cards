@@ -36,11 +36,10 @@ def convert_to_js(translations)
   end.join("\n") + "\n      };"
 end
 
-
-
 phrases_count = words_and_translations.keys.size
 
 phrases_js_text = convert_to_js(words_and_translations)
+
 
 
 
@@ -83,7 +82,7 @@ def button_for_phrase_group(index, translations, group_size, button_type)
 end
 
 
-def button_for_small_group(index, translations, group_size)
+def button_for_small_group(index, translations, group_size, button_type, is_review_button)
 
   last_index = translations.keys.sort[-1]
   if index != last_index && index % group_size != 0
@@ -101,7 +100,13 @@ def button_for_small_group(index, translations, group_size)
   setup_values   = (min_value..max_value).map {|index| "'#{index}'"}.join(', ')
   display_values = (min_value..max_value).map {|index| index.to_s + ": " + translations[index][:spanish_value]}.join(', ')
 
-  "<button type=\"button\" class=\"btn btn-info\" onclick=\"setup( [#{setup_values}] );\">#{display_values}</button>"
+  if is_review_button
+    display_values = "Review"
+  end
+
+
+  # puts "************** index #{index}   min #{min_value}   max #{max_value}"
+  "<button type=\"button\" class=\"btn btn-#{button_type}\" onclick=\"setup( [#{setup_values}] );\">#{display_values}</button>"
 end
 
 
@@ -111,7 +116,8 @@ end
 
 buttons = (1..phrases_count).map do |index|
   [
-    button_for_small_group(index, words_and_translations, GROUP_SIZE_SMALL),
+    button_for_small_group(index, words_and_translations, GROUP_SIZE_SMALL, 'info',   false),
+    # button_for_small_group(index, words_and_translations, GROUP_SIZE_BIG,   'primary', true),
     # button_for_phrase_group(index, words_and_translations, GROUP_SIZE_SMALL, 'info'),
     # button_for_phrase_group(index, words_and_translations, GROUP_SIZE_BIG,   'primary'),
     # button_for_phrase_group(index, words_and_translations, phrases_count,    'success'),
@@ -119,6 +125,32 @@ buttons = (1..phrases_count).map do |index|
   ]
 end.flatten.reject {|elem| elem.empty? }.map {|elem| "            #{elem}"}.join("\n")
 
+
+# [
+#   [1, {:english_value=>"on, in", :spanish_value=>"en"}], 
+#   [2, {:english_value=>"the", :spanish_value=>"el"}], 
+#   [3, {:english_value=>"calculation", :spanish_value=>"cómputo"}]
+# ]
+def make_button(slice, button_type)
+  indexes = slice.map {|arr| arr[0]}.map {|index| "'#{index}'"}.join(', ')
+  spanish_values = slice.map {|arr| arr[1][:spanish_value]}.join(', ')
+  "<button type=\"button\" class=\"btn btn-#{button_type}\" onclick=\"setup( [#{indexes}] );\">#{spanish_values}</button>"
+end
+
+def button_position(slice)
+  slice.map {|arr| arr[0]}.max
+end
+
+buttons_hash = {}
+
+# puts words_and_translations.inspect
+words_and_translations.each_slice(GROUP_SIZE_SMALL) do |slice|
+  buttons_hash[button_position(slice)] ||= []
+  buttons_hash[button_position(slice)] << make_button(slice, 'info')
+end
+
+
+puts buttons_hash.inspect
 
 
 #################################
