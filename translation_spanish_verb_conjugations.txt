@@ -1,14 +1,17 @@
+haber - Present ::: he has ha,hay hemos habéis han
 Imperfect AR Verbs ::: aba abas aba ábamos abais aban
 Imperfect ER/IR Verbs ::: ía ías ía íamos íais ían
 ir - Imperfect ::: iba ibas iba íbamos ibais iban
 ser - Imperfect ::: era eras era éramos erais eran
 ver - Imperfect ::: veía veías veía veíamos veíais veían
+haber - Imperfect ::: había 	habías 	había 	habíamos 	habíais 	habían
 Preterite AR Verbs ::: é aste ó amos asteis aron
 Preterite ER/IR Verbs ::: í iste ió imos isteis ieron
 ser - Preterite ::: fui fuiste fue fuimos fuisteis fueron
 ir - Preterite ::: fui fuiste fue fuimos fuisteis fueron
 dar - Preterite ::: di diste dio dimos disteis dieron
 ver - Preterite ::: vi viste vio vimos visteis vieron
+haber - Preterite ::: hube 	hubiste 	hubo 	hubimos 	hubisteis 	hubieron
 Conditional AR/ER/IR Verbs ::: infinitive + ía ías ía íamos íais ían
 tener - Conditional ::: tendría tendrías tendría tendríamos tendríais tendrían
 poner - Conditional ::: pondría pondrías pondría pondríamos pondríais pondrían

@@ -89,43 +89,46 @@
       var allDone;
 
       var masterListOfPhrases = {
-        "1" : { "spanish" : "Imperfect AR Verbs", "english" : "aba abas aba ábamos abais aban" },
-        "2" : { "spanish" : "Imperfect ER/IR Verbs", "english" : "ía ías ía íamos íais ían" },
-        "3" : { "spanish" : "ir - Imperfect", "english" : "iba ibas iba íbamos ibais iban" },
-        "4" : { "spanish" : "ser - Imperfect", "english" : "era eras era éramos erais eran" },
-        "5" : { "spanish" : "ver - Imperfect", "english" : "veía veías veía veíamos veíais veían" },
-        "6" : { "spanish" : "Preterite AR Verbs", "english" : "é aste ó amos asteis aron" },
-        "7" : { "spanish" : "Preterite ER/IR Verbs", "english" : "í iste ió imos isteis ieron" },
-        "8" : { "spanish" : "ser - Preterite", "english" : "fui fuiste fue fuimos fuisteis fueron" },
-        "9" : { "spanish" : "ir - Preterite", "english" : "fui fuiste fue fuimos fuisteis fueron" },
-        "10" : { "spanish" : "dar - Preterite", "english" : "di diste dio dimos disteis dieron" },
-        "11" : { "spanish" : "ver - Preterite", "english" : "vi viste vio vimos visteis vieron" },
-        "12" : { "spanish" : "Conditional AR/ER/IR Verbs", "english" : "infinitive + ía ías ía íamos íais ían" },
-        "13" : { "spanish" : "tener - Conditional", "english" : "tendría tendrías tendría tendríamos tendríais tendrían" },
-        "14" : { "spanish" : "poner - Conditional", "english" : "pondría pondrías pondría pondríamos pondríais pondrían" },
-        "15" : { "spanish" : "valer - Conditional", "english" : "valdría valdrías valdría valdríamos valdríais valdrían" },
-        "16" : { "spanish" : "salir - Conditional", "english" : "saldría saldrías saldría saldríamos saldríais saldrían" },
-        "17" : { "spanish" : "venir - Conditional", "english" : "vendría vendrías vendría vendríamos vendríais vendrían" },
-        "18" : { "spanish" : "poder - Conditional", "english" : "podría podrías podría podríamos podríais podrían" },
-        "19" : { "spanish" : "caber - Conditional", "english" : "cabría cabrías cabría cabríamos cabríais cabrían" },
-        "20" : { "spanish" : "haber - Conditional", "english" : "habría habrías habría habríamos habríais habrían" },
-        "21" : { "spanish" : "querer - Conditional", "english" : "querría querrías querría querríamos querríais querrían" },
-        "22" : { "spanish" : "saber - Conditional", "english" : "sabría sabrías sabría sabríamos sabríais sabrían" },
-        "23" : { "spanish" : "dar - Conditional", "english" : "diría dirías diría diríamos diríais dirían" },
-        "24" : { "spanish" : "hacer - Conditional", "english" : "haría harías haría haríamos haríais harían" },
-        "25" : { "spanish" : "Future AR/ER/IR Verbs", "english" : "infinitive + é ás á emos éis án" },
-        "26" : { "spanish" : "tener - Future", "english" : "tendré tendrás tendrá tendremos tendréis tendrán" },
-        "27" : { "spanish" : "poner - Future", "english" : "pondré pondrás pondrá pondremos pondréis pondrán" },
-        "28" : { "spanish" : "valer - Future", "english" : "valdré valdrás valdrá valdremos valdréis valdrán" },
-        "29" : { "spanish" : "salir - Future", "english" : "saldré saldrás saldrá saldremos saldréis saldrán" },
-        "30" : { "spanish" : "venir - Future", "english" : "vendré vendrás vendrá vendremos vendréis vendrán" },
-        "31" : { "spanish" : "poder - Future", "english" : "podré podrás podrá podremos podréis podrán" },
-        "32" : { "spanish" : "caber - Future", "english" : "cabré cabrás cabrá cabremos cabréis cabrán" },
-        "33" : { "spanish" : "haber - Future", "english" : "habré habrás habrá habremos habréis habrán" },
-        "34" : { "spanish" : "querer - Future", "english" : "querré querrás querrá querremos querréis querrán" },
-        "35" : { "spanish" : "saber - Future", "english" : "sabré sabrás sabrá sabremos sabréis sabrán" },
-        "36" : { "spanish" : "dar - Future", "english" : "diré dirás dirá diremos diréis dirán" },
-        "37" : { "spanish" : "hacer - Future", "english" : "haré harás hará haremos haréis harán" },
+        "1" : { "spanish" : "haber - Present", "english" : "he has ha,hay hemos habéis han" },
+        "2" : { "spanish" : "Imperfect AR Verbs", "english" : "aba abas aba ábamos abais aban" },
+        "3" : { "spanish" : "Imperfect ER/IR Verbs", "english" : "ía ías ía íamos íais ían" },
+        "4" : { "spanish" : "ir - Imperfect", "english" : "iba ibas iba íbamos ibais iban" },
+        "5" : { "spanish" : "ser - Imperfect", "english" : "era eras era éramos erais eran" },
+        "6" : { "spanish" : "ver - Imperfect", "english" : "veía veías veía veíamos veíais veían" },
+        "7" : { "spanish" : "haber - Imperfect", "english" : "había 	habías 	había 	habíamos 	habíais 	habían" },
+        "8" : { "spanish" : "Preterite AR Verbs", "english" : "é aste ó amos asteis aron" },
+        "9" : { "spanish" : "Preterite ER/IR Verbs", "english" : "í iste ió imos isteis ieron" },
+        "10" : { "spanish" : "ser - Preterite", "english" : "fui fuiste fue fuimos fuisteis fueron" },
+        "11" : { "spanish" : "ir - Preterite", "english" : "fui fuiste fue fuimos fuisteis fueron" },
+        "12" : { "spanish" : "dar - Preterite", "english" : "di diste dio dimos disteis dieron" },
+        "13" : { "spanish" : "ver - Preterite", "english" : "vi viste vio vimos visteis vieron" },
+        "14" : { "spanish" : "haber - Preterite", "english" : "hube 	hubiste 	hubo 	hubimos 	hubisteis 	hubieron" },
+        "15" : { "spanish" : "Conditional AR/ER/IR Verbs", "english" : "infinitive + ía ías ía íamos íais ían" },
+        "16" : { "spanish" : "tener - Conditional", "english" : "tendría tendrías tendría tendríamos tendríais tendrían" },
+        "17" : { "spanish" : "poner - Conditional", "english" : "pondría pondrías pondría pondríamos pondríais pondrían" },
+        "18" : { "spanish" : "valer - Conditional", "english" : "valdría valdrías valdría valdríamos valdríais valdrían" },
+        "19" : { "spanish" : "salir - Conditional", "english" : "saldría saldrías saldría saldríamos saldríais saldrían" },
+        "20" : { "spanish" : "venir - Conditional", "english" : "vendría vendrías vendría vendríamos vendríais vendrían" },
+        "21" : { "spanish" : "poder - Conditional", "english" : "podría podrías podría podríamos podríais podrían" },
+        "22" : { "spanish" : "caber - Conditional", "english" : "cabría cabrías cabría cabríamos cabríais cabrían" },
+        "23" : { "spanish" : "haber - Conditional", "english" : "habría habrías habría habríamos habríais habrían" },
+        "24" : { "spanish" : "querer - Conditional", "english" : "querría querrías querría querríamos querríais querrían" },
+        "25" : { "spanish" : "saber - Conditional", "english" : "sabría sabrías sabría sabríamos sabríais sabrían" },
+        "26" : { "spanish" : "dar - Conditional", "english" : "diría dirías diría diríamos diríais dirían" },
+        "27" : { "spanish" : "hacer - Conditional", "english" : "haría harías haría haríamos haríais harían" },
+        "28" : { "spanish" : "Future AR/ER/IR Verbs", "english" : "infinitive + é ás á emos éis án" },
+        "29" : { "spanish" : "tener - Future", "english" : "tendré tendrás tendrá tendremos tendréis tendrán" },
+        "30" : { "spanish" : "poner - Future", "english" : "pondré pondrás pondrá pondremos pondréis pondrán" },
+        "31" : { "spanish" : "valer - Future", "english" : "valdré valdrás valdrá valdremos valdréis valdrán" },
+        "32" : { "spanish" : "salir - Future", "english" : "saldré saldrás saldrá saldremos saldréis saldrán" },
+        "33" : { "spanish" : "venir - Future", "english" : "vendré vendrás vendrá vendremos vendréis vendrán" },
+        "34" : { "spanish" : "poder - Future", "english" : "podré podrás podrá podremos podréis podrán" },
+        "35" : { "spanish" : "caber - Future", "english" : "cabré cabrás cabrá cabremos cabréis cabrán" },
+        "36" : { "spanish" : "haber - Future", "english" : "habré habrás habrá habremos habréis habrán" },
+        "37" : { "spanish" : "querer - Future", "english" : "querré querrás querrá querremos querréis querrán" },
+        "38" : { "spanish" : "saber - Future", "english" : "sabré sabrás sabrá sabremos sabréis sabrán" },
+        "39" : { "spanish" : "dar - Future", "english" : "diré dirás dirá diremos diréis dirán" },
+        "40" : { "spanish" : "hacer - Future", "english" : "haré harás hará haremos haréis harán" },
       };
 
     </script>
@@ -158,50 +161,63 @@
           <h4>Phrases</h4>
           <p>
 
-            <button type="button" class="btn btn-info" onclick="setup( ['1'] );">Imperfect AR Verbs</button>
-            <button type="button" class="btn btn-info" onclick="setup( ['2'] );">Imperfect ER/IR Verbs</button>
-            <button type="button" class="btn btn-info" onclick="setup( ['3'] );">ir - Imperfect</button>
-            <button type="button" class="btn btn-info" onclick="setup( ['4'] );">ser - Imperfect</button>
-            <button type="button" class="btn btn-info" onclick="setup( ['5'] );">ver - Imperfect</button>
-            <br>
-            <button type="button" class="btn btn-info" onclick="setup( ['6'] );">Preterite AR Verbs</button>
-            <button type="button" class="btn btn-info" onclick="setup( ['7'] );">Preterite ER/IR Verbs</button>
-            <button type="button" class="btn btn-info" onclick="setup( ['8'] );">ser - Preterite</button>
-            <button type="button" class="btn btn-info" onclick="setup( ['9'] );">ir - Preterite</button>
-            <button type="button" class="btn btn-info" onclick="setup( ['10'] );">dar - Preterite</button>
-            <br>
-            <button type="button" class="btn btn-info" onclick="setup( ['11'] );">ver - Preterite</button>
-            <button type="button" class="btn btn-info" onclick="setup( ['12'] );">Conditional AR/ER/IR Verbs</button>
-            <button type="button" class="btn btn-info" onclick="setup( ['13'] );">tener - Conditional</button>
-            <button type="button" class="btn btn-info" onclick="setup( ['14'] );">poner - Conditional</button>
-            <button type="button" class="btn btn-info" onclick="setup( ['15'] );">valer - Conditional</button>
-            <br>
-            <button type="button" class="btn btn-info" onclick="setup( ['16'] );">salir - Conditional</button>
-            <button type="button" class="btn btn-info" onclick="setup( ['17'] );">venir - Conditional</button>
-            <button type="button" class="btn btn-info" onclick="setup( ['18'] );">poder - Conditional</button>
-            <button type="button" class="btn btn-info" onclick="setup( ['19'] );">caber - Conditional</button>
-            <button type="button" class="btn btn-info" onclick="setup( ['20'] );">haber - Conditional</button>
-            <br>
-            <button type="button" class="btn btn-info" onclick="setup( ['21'] );">querer - Conditional</button>
-            <button type="button" class="btn btn-info" onclick="setup( ['22'] );">saber - Conditional</button>
-            <button type="button" class="btn btn-info" onclick="setup( ['23'] );">dar - Conditional</button>
-            <button type="button" class="btn btn-info" onclick="setup( ['24'] );">hacer - Conditional</button>
-            <button type="button" class="btn btn-info" onclick="setup( ['25'] );">Future AR/ER/IR Verbs</button>
-            <br>
-            <button type="button" class="btn btn-info" onclick="setup( ['26'] );">tener - Future</button>
-            <button type="button" class="btn btn-info" onclick="setup( ['27'] );">poner - Future</button>
-            <button type="button" class="btn btn-info" onclick="setup( ['28'] );">valer - Future</button>
-            <button type="button" class="btn btn-info" onclick="setup( ['29'] );">salir - Future</button>
-            <button type="button" class="btn btn-info" onclick="setup( ['30'] );">venir - Future</button>
-            <br>
-            <button type="button" class="btn btn-info" onclick="setup( ['31'] );">poder - Future</button>
-            <button type="button" class="btn btn-info" onclick="setup( ['32'] );">caber - Future</button>
-            <button type="button" class="btn btn-info" onclick="setup( ['33'] );">haber - Future</button>
-            <button type="button" class="btn btn-info" onclick="setup( ['34'] );">querer - Future</button>
-            <button type="button" class="btn btn-info" onclick="setup( ['35'] );">saber - Future</button>
-            <br>
-            <button type="button" class="btn btn-info" onclick="setup( ['36'] );">dar - Future</button>
-            <button type="button" class="btn btn-info" onclick="setup( [] );"></button>
+<button type="button" class="btn btn-info" onclick="setup( ['1'] );">haber - Present</button>
+<button type="button" class="btn btn-info" onclick="setup( ['2'] );">Imperfect AR Verbs</button>
+<button type="button" class="btn btn-info" onclick="setup( ['3'] );">Imperfect ER/IR Verbs</button>
+<button type="button" class="btn btn-info" onclick="setup( ['4'] );">ir - Imperfect</button>
+<button type="button" class="btn btn-info" onclick="setup( ['5'] );">ser - Imperfect</button>
+<button type="button" class="btn btn-primary" onclick="setup( ['1', '2', '3', '4', '5'] );">1 - 5</button>
+<br>
+<button type="button" class="btn btn-info" onclick="setup( ['6'] );">ver - Imperfect</button>
+<button type="button" class="btn btn-info" onclick="setup( ['7'] );">haber - Imperfect</button>
+<button type="button" class="btn btn-info" onclick="setup( ['8'] );">Preterite AR Verbs</button>
+<button type="button" class="btn btn-info" onclick="setup( ['9'] );">Preterite ER/IR Verbs</button>
+<button type="button" class="btn btn-info" onclick="setup( ['10'] );">ser - Preterite</button>
+<button type="button" class="btn btn-primary" onclick="setup( ['6', '7', '8', '9', '10'] );">6 - 10</button>
+<br>
+<button type="button" class="btn btn-info" onclick="setup( ['11'] );">ir - Preterite</button>
+<button type="button" class="btn btn-info" onclick="setup( ['12'] );">dar - Preterite</button>
+<button type="button" class="btn btn-info" onclick="setup( ['13'] );">ver - Preterite</button>
+<button type="button" class="btn btn-info" onclick="setup( ['14'] );">haber - Preterite</button>
+<button type="button" class="btn btn-info" onclick="setup( ['15'] );">Conditional AR/ER/IR Verbs</button>
+<button type="button" class="btn btn-primary" onclick="setup( ['11', '12', '13', '14', '15'] );">11 - 15</button>
+<br>
+<button type="button" class="btn btn-info" onclick="setup( ['16'] );">tener - Conditional</button>
+<button type="button" class="btn btn-info" onclick="setup( ['17'] );">poner - Conditional</button>
+<button type="button" class="btn btn-info" onclick="setup( ['18'] );">valer - Conditional</button>
+<button type="button" class="btn btn-info" onclick="setup( ['19'] );">salir - Conditional</button>
+<button type="button" class="btn btn-info" onclick="setup( ['20'] );">venir - Conditional</button>
+<button type="button" class="btn btn-primary" onclick="setup( ['16', '17', '18', '19', '20'] );">16 - 20</button>
+<br>
+<button type="button" class="btn btn-info" onclick="setup( ['21'] );">poder - Conditional</button>
+<button type="button" class="btn btn-info" onclick="setup( ['22'] );">caber - Conditional</button>
+<button type="button" class="btn btn-info" onclick="setup( ['23'] );">haber - Conditional</button>
+<button type="button" class="btn btn-info" onclick="setup( ['24'] );">querer - Conditional</button>
+<button type="button" class="btn btn-info" onclick="setup( ['25'] );">saber - Conditional</button>
+<button type="button" class="btn btn-primary" onclick="setup( ['21', '22', '23', '24', '25'] );">21 - 25</button>
+<br>
+<button type="button" class="btn btn-info" onclick="setup( ['26'] );">dar - Conditional</button>
+<button type="button" class="btn btn-info" onclick="setup( ['27'] );">hacer - Conditional</button>
+<button type="button" class="btn btn-info" onclick="setup( ['28'] );">Future AR/ER/IR Verbs</button>
+<button type="button" class="btn btn-info" onclick="setup( ['29'] );">tener - Future</button>
+<button type="button" class="btn btn-info" onclick="setup( ['30'] );">poner - Future</button>
+<button type="button" class="btn btn-primary" onclick="setup( ['26', '27', '28', '29', '30'] );">26 - 30</button>
+<br>
+<button type="button" class="btn btn-info" onclick="setup( ['31'] );">valer - Future</button>
+<button type="button" class="btn btn-info" onclick="setup( ['32'] );">salir - Future</button>
+<button type="button" class="btn btn-info" onclick="setup( ['33'] );">venir - Future</button>
+<button type="button" class="btn btn-info" onclick="setup( ['34'] );">poder - Future</button>
+<button type="button" class="btn btn-info" onclick="setup( ['35'] );">caber - Future</button>
+<button type="button" class="btn btn-primary" onclick="setup( ['31', '32', '33', '34', '35'] );">31 - 35</button>
+<br>
+<button type="button" class="btn btn-info" onclick="setup( ['36'] );">haber - Future</button>
+<button type="button" class="btn btn-info" onclick="setup( ['37'] );">querer - Future</button>
+<button type="button" class="btn btn-info" onclick="setup( ['38'] );">saber - Future</button>
+<button type="button" class="btn btn-info" onclick="setup( ['39'] );">dar - Future</button>
+<button type="button" class="btn btn-info" onclick="setup( ['40'] );">hacer - Future</button>
+<button type="button" class="btn btn-primary" onclick="setup( ['36', '37', '38', '39', '40'] );">36 - 40</button>
+<br>
+<button type="button" class="btn btn-success" onclick="setup( ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40'] );">1 - 40</button>
 
           </p>
         </div>
